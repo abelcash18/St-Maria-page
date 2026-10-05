@@ -38,15 +38,15 @@
       </div>
     </div>
     <nav id="desktopNav" class="desktop-nav">
-      <span class="nav-link" onclick="scrollToId('home')">Home</span>
-      <span class="nav-link" onclick="scrollToId('about')">About</span>
-      <span class="nav-link" onclick="scrollToId('academics')">Academics</span>
-      <span class="nav-link" onclick="scrollToId('admissions')">Admissions</span>
-      <span class="nav-link" onclick="scrollToId('campus')">Campus</span>
-      <span class="nav-link" onclick="scrollToId('contact')">Contact</span>
+      <span class="nav-link" onclick="window.location.href='index.html'">Home</span>
+      <span class="nav-link" onclick="window.location.href='about.html'">About</span>
+      <span class="nav-link" onclick="window.location.href='academics.html'">Academics</span>
+      <span class="nav-link" onclick="window.location.href='admissions.html'">Admissions</span>
+      <span class="nav-link" onclick="window.location.href='gallery.html'">Campus</span>
+      <span class="nav-link" onclick="window.location.href='contact.html'">Contact</span>
     </nav>
     <div class="header-actions">
-      <button class="btn btn-primary" id="applyBtn" onclick="scrollToId('admissions')">Apply Now</button>
+      <button class="btn btn-primary" id="applyBtn" onclick="window.location.href='admissions.html'">Apply Now</button>
       <button onclick="toggleMenu()" class="menu-btn" id="menuBtn">☰</button>
     </div>
   </div>
@@ -55,13 +55,13 @@
 <div id="mobileMenu" class="mobile-menu">
   <div class="mobile-top"><strong class="serif">Menu</strong><button class="close static" onclick="toggleMenu()">✕</button></div>
   <div class="mobile-links">
-    <span class="nav-link large" onclick="scrollToId('home');toggleMenu()">Home</span>
-    <span class="nav-link large" onclick="scrollToId('about');toggleMenu()">About</span>
-    <span class="nav-link large" onclick="scrollToId('academics');toggleMenu()">Academics</span>
-    <span class="nav-link large" onclick="scrollToId('admissions');toggleMenu()">Admissions</span>
-    <span class="nav-link large" onclick="scrollToId('campus');toggleMenu()">Campus</span>
-    <span class="nav-link large" onclick="scrollToId('contact');toggleMenu()">Contact</span>
-    <button class="btn btn-primary mt-20" onclick="scrollToId('admissions');toggleMenu()">Apply Now</button>
+    <span class="nav-link large" onclick="window.location.href='index.html';toggleMenu()">Home</span>
+    <span class="nav-link large" onclick="window.location.href='about.html';toggleMenu()">About</span>
+    <span class="nav-link large" onclick="window.location.href='academics.html';toggleMenu()">Academics</span>
+    <span class="nav-link large" onclick="window.location.href='admissions.html';toggleMenu()">Admissions</span>
+    <span class="nav-link large" onclick="window.location.href='gallery.html';toggleMenu()">Campus</span>
+    <span class="nav-link large" onclick="window.location.href='contact.html';toggleMenu()">Contact</span>
+    <button class="btn btn-primary mt-20" onclick="window.location.href='admissions.html';toggleMenu()">Apply Now</button>
   </div>
 </div>
 
@@ -160,6 +160,57 @@
   </div>
 </section>
 
+<!-- Gallery -->
+<section id="gallery-showcase" class="section-white">
+  <div class="container">
+    <div data-reveal class="section-head">
+      <div><div class="badge">School Highlights</div><h2 class="serif section-title">A campus designed to inspire</h2></div>
+      <p class="section-para">From academic excellence to faith formation, our campus creates the balance every young girl needs to thrive.</p>
+    </div>
+    <div class="gallery-showcase-grid">
+      <div class="showcase-card card" data-reveal><div class="showcase-visual visual-one">STEM Lab</div><div class="showcase-body"><h3>Innovation Hub</h3><p>Robotics, coding and creative problem-solving in a modern learning environment.</p></div></div>
+      <div class="showcase-card card" data-reveal><div class="showcase-visual visual-two">Chapel</div><div class="showcase-body"><h3>Faith Formation</h3><p>Daily worship, mentorship and leadership rooted in Catholic values.</p></div></div>
+      <div class="showcase-card card" data-reveal><div class="showcase-visual visual-three">Sports</div><div class="showcase-body"><h3>Healthy Living</h3><p>Sport, discipline and teamwork help every student grow in confidence.</p></div></div>
+      <div class="showcase-card card" data-reveal><div class="showcase-visual visual-four">Library</div><div class="showcase-body"><h3>Learning Commons</h3><p>Quiet reading spaces, digital resources and inquiry-based learning.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Awards & Testimonials -->
+<section class="section-white">
+  <div class="container">
+    <div data-reveal class="section-head">
+      <div><div class="badge">Achievements</div><h2 class="serif section-title">Why families choose Goretti</h2></div>
+      <p class="section-para">Our girls excel academically and in leadership, while families trust our warm, disciplined and values-rich environment.</p>
+    </div>
+
+    <div class="awards-strip" data-reveal>
+      <div class="award-item"><div class="award-num">15+</div><div class="award-label">Olympiad medals</div></div>
+      <div class="award-item"><div class="award-num">98%</div><div class="award-label">University placement</div></div>
+      <div class="award-item"><div class="award-num">30+</div><div class="award-label">Scholarship partners</div></div>
+      <div class="award-item"><div class="award-num">24/7</div><div class="award-label">Student support</div></div>
+    </div>
+
+    <div class="testimonial-grid">
+      <div class="quote-card card" data-reveal>
+        <div class="quote-mark">“</div>
+        <p>My daughter has grown in confidence, discipline and excellence. The school balance of faith, academics and leadership is exceptional.</p>
+        <div class="quote-author"><strong>Mrs. Ada Okafor</strong><span>Parent, SS2</span></div>
+      </div>
+      <div class="quote-card card" data-reveal>
+        <div class="quote-mark">“</div>
+        <p>The teachers know each child, the culture is empowering, and students are prepared to lead with wisdom and grace.</p>
+        <div class="quote-author"><strong>Mr. Daniel Eze</strong><span>Parent, JSS3</span></div>
+      </div>
+      <div class="quote-card card" data-reveal>
+        <div class="quote-mark">“</div>
+        <p>Our girls are taught to think, pray and serve. Goretti is academically strong and deeply rooted in values.</p>
+        <div class="quote-author"><strong>Mrs. Joy Ibe</strong><span>Parent, SS1</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Contact -->
 <section id="contact" class="section-cream">
   <div class="container grid2">
@@ -168,7 +219,7 @@
       <h2 class="serif section-title">Come and see where grace lives</h2>
       <div class="card contact-map">
         <div class="map-placeholder">🗺️ Campus Map • 24-Acre Serene Grounds</div>
-        <div class="map-tags"><span>24/7 Security</span><span>Solar Powered</span></div>
+        <div class="map-tags"><span>24/7 Security</span><span>Solar Powered</span><span>Boarding</span></div>
         <div class="contact-info">📍 Km 8 Benin-Auchi Road, Edo State<br>📞 +234 803 123 4567<br>✉️ registrar@stmariagoretti.edu.ng</div>
       </div>
     </div>
@@ -176,7 +227,8 @@
       <h3 class="serif">Send us a message</h3><p class="form-sub">Admissions team responds within 24 hours.</p>
       <form id="contactForm" onsubmit="handleContact(event)">
         <div class="form-row"><input name="name" required placeholder="Parent / Guardian Name"><input name="email" type="email" required placeholder="Email"></div>
-        <select name="interest"><option>JSS1 Admission</option><option>SS1 Transfer</option><option>Campus Tour</option><option>Scholarship</option></select>
+        <div class="form-row"><input name="child" placeholder="Student Name"><input name="class" placeholder="Current Class / Level"></div>
+        <div class="form-row"><select name="interest"><option>JSS1 Admission</option><option>SS1 Transfer</option><option>Campus Tour</option><option>Scholarship</option></select><select name="entry"><option>2026/2027 Session</option><option>2027/2028 Session</option><option>Immediate Enquiry</option></select></div>
         <textarea name="message" required placeholder="Tell us about your daughter..."></textarea>
         <button class="btn btn-primary full">Send Message</button>
         <div id="contactStatus" class="form-status"></div>

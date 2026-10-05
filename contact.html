@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | St Maria Goretti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header id="header" class="header">
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <div class="logo">MG</div>
+        <div class="logo-text">
+          <div class="serif logo-title">St Maria Goretti</div>
+          <div class="logo-sub">Girls Grammar School</div>
+        </div>
+      </div>
+      <nav class="desktop-nav">
+        <span class="nav-link" onclick="window.location.href='index.html'">Home</span>
+        <span class="nav-link" onclick="window.location.href='about.html'">About</span>
+        <span class="nav-link" onclick="window.location.href='academics.html'">Academics</span>
+        <span class="nav-link" onclick="window.location.href='admissions.html'">Admissions</span>
+        <span class="nav-link" onclick="window.location.href='gallery.html'">Campus</span>
+        <span class="nav-link" onclick="window.location.href='contact.html'">Contact</span>
+      </nav>
+      <div class="header-actions">
+        <button class="btn btn-primary" onclick="window.location.href='admissions.html'">Apply Now</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <div>
+          <div class="page-tag"><span class="dot"></span> Contact</div>
+          <h1 class="serif hero-title">We would love to hear from you</h1>
+          <p class="hero-desc">Whether you are enquiring about admissions, school visits or scholarships, our team is ready to help.</p>
+        </div>
+        <div class="page-side-card card">
+          <h3 class="serif">Quick details</h3>
+          <ul>
+            <li>Admissions line: +234 803 123 4567</li>
+            <li>Email: registrar@stmariagoretti.edu.ng</li>
+            <li>Campus: Km 8 Benin-Auchi Road, Edo State</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-cream">
+      <div class="container contact-layout">
+        <div class="card contact-form-card" data-reveal>
+          <h3 class="serif">Send us a message</h3>
+          <p class="form-sub">We usually respond within 24 hours.</p>
+          <form id="contactForm" onsubmit="handleContact(event)">
+            <div class="form-row"><input name="name" required placeholder="Your Name"><input name="email" type="email" required placeholder="Email"></div>
+            <div class="form-row"><input name="phone" placeholder="Phone Number"><input name="subject" placeholder="Subject"></div>
+            <textarea name="message" required placeholder="Write your message..."></textarea>
+            <button class="btn btn-primary full">Send Message</button>
+            <div id="contactStatus" class="form-status"></div>
+          </form>
+        </div>
+        <div class="card info-card" data-reveal>
+          <div class="badge">Visit our school</div>
+          <h3 class="serif">Campus address</h3>
+          <ul class="contact-list">
+            <li>📍 Km 8 Benin-Auchi Road, Edo State</li>
+            <li>📞 +234 803 123 4567</li>
+            <li>✉️ registrar@stmariagoretti.edu.ng</li>
+            <li>⏰ Mon - Fri: 8:00am - 4:00pm</li>
+          </ul>
+          <div class="map-box" style="margin-top:18px;">Campus Map</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo-wrap"><div class="logo white">MG</div><div><div class="serif footer-logo-title">St Maria Goretti</div><div class="footer-logo-sub">GIRLS GRAMMAR SCHOOL</div></div></div>
+      </div>
+      <div>
+        <div class="footer-head">CONTACT</div>
+        <div class="footer-links">+234 803 123 4567<br>registrar@stmariagoretti.edu.ng</div>
+      </div>
+      <div>
+        <div class="footer-head">ADDRESS</div>
+        <div class="footer-links">Km 8 Benin-Auchi Road<br>Edo State, Nigeria</div>
+      </div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 St Maria Goretti Girls Grammar School</span><span>Privacy • Terms</span></div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

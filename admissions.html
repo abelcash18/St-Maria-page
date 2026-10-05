@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions | St Maria Goretti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header id="header" class="header">
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <div class="logo">MG</div>
+        <div class="logo-text">
+          <div class="serif logo-title">St Maria Goretti</div>
+          <div class="logo-sub">Girls Grammar School</div>
+        </div>
+      </div>
+      <nav class="desktop-nav">
+        <span class="nav-link" onclick="window.location.href='index.html#home'">Home</span>
+        <span class="nav-link" onclick="window.location.href='index.html#about'">About</span>
+        <span class="nav-link" onclick="window.location.href='index.html#academics'">Academics</span>
+        <span class="nav-link" onclick="window.location.href='admissions.html'">Admissions</span>
+        <span class="nav-link" onclick="window.location.href='index.html#campus'">Campus</span>
+        <span class="nav-link" onclick="window.location.href='index.html#contact'">Contact</span>
+      </nav>
+      <div class="header-actions">
+        <button class="btn btn-primary" onclick="window.location.href='index.html#contact'">Talk to Registrar</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="admissions-hero">
+      <div class="container admissions-hero-inner">
+        <div data-reveal>
+          <div class="badge"><span class="dot"></span> Admissions Open</div>
+          <h1 class="serif hero-title">Apply for the 2026/2027 academic session</h1>
+          <p class="hero-desc">A faith-filled, academically rigorous environment where every girl is prepared to lead, serve and excel.</p>
+          <div class="hero-btns">
+            <button class="btn btn-primary" onclick="document.getElementById('admissionForm').scrollIntoView({behavior:'smooth'})">Start Application</button>
+            <button class="btn btn-outline" onclick="window.location.href='index.html'">Back to Home</button>
+          </div>
+        </div>
+        <div class="admissions-side card" data-reveal>
+          <h3 class="serif">What you get</h3>
+          <ul class="feature-list">
+            <li>✔ Faith-based leadership</li>
+            <li>✔ Small class sizes</li>
+            <li>✔ Boarding and day options</li>
+            <li>✔ Excellent university pathway</li>
+            <li>✔ Supportive school community</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-white">
+      <div class="container admissions-grid">
+        <div class="card info-card" data-reveal>
+          <div class="badge">Requirements</div>
+          <h3 class="serif">Application checklist</h3>
+          <ul class="check-list">
+            <li>Birth certificate</li>
+            <li>Recent passport photograph</li>
+            <li>Academic transcript or results</li>
+            <li>Parent/guardian ID</li>
+            <li>Recommendation letter</li>
+          </ul>
+        </div>
+
+        <div class="card info-card" data-reveal>
+          <div class="badge">Important Dates</div>
+          <h3 class="serif">Upcoming dates</h3>
+          <ul class="check-list compact">
+            <li><strong>Application Opens:</strong> 1st February 2026</li>
+            <li><strong>Entrance Test:</strong> 14th March 2026</li>
+            <li><strong>Interviews:</strong> 20th - 30th March 2026</li>
+            <li><strong>School Resumption:</strong> September 2026</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-cream" id="admissionForm">
+      <div class="container form-wrap">
+        <div class="card contact-form-card" data-reveal>
+          <h3 class="serif">Apply now</h3>
+          <p class="form-sub">Complete the form below and our admissions team will contact you.</p>
+          <form id="contactForm" onsubmit="handleContact(event)">
+            <div class="form-row">
+              <input name="name" required placeholder="Parent / Guardian Name" />
+              <input name="email" type="email" required placeholder="Email Address" />
+            </div>
+            <div class="form-row">
+              <input name="child" placeholder="Student Name" />
+              <input name="phone" placeholder="Phone Number" />
+            </div>
+            <div class="form-row">
+              <select name="level">
+                <option>JSS1</option>
+                <option>JSS2</option>
+                <option>JSS3</option>
+                <option>SS1</option>
+                <option>SS2</option>
+                <option>Transfer</option>
+              </select>
+              <select name="entry">
+                <option>2026/2027 Session</option>
+                <option>2027/2028 Session</option>
+                <option>Immediate Enquiry</option>
+              </select>
+            </div>
+            <textarea name="message" required placeholder="Tell us about your child and the class they are applying for..."></textarea>
+            <button class="btn btn-primary full">Submit Application</button>
+            <div id="contactStatus" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo-wrap">
+          <div class="logo white">MG</div>
+          <div>
+            <div class="serif footer-logo-title">St Maria Goretti</div>
+            <div class="footer-logo-sub">GIRLS GRAMMAR SCHOOL</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-head">CONTACT</div>
+        <div class="footer-links">+234 803 123 4567<br>registrar@stmariagoretti.edu.ng</div>
+      </div>
+      <div>
+        <div class="footer-head">ADDRESS</div>
+        <div class="footer-links">Km 8 Benin-Auchi Road,<br>Edo State, Nigeria</div>
+      </div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 St Maria Goretti Girls Grammar School</span><span>Privacy • Terms</span></div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
