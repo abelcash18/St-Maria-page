@@ -89,6 +89,25 @@ function handleContact(e){
   e.target.reset();
 }
 
+function animateCounter(el){
+  const target = Number(el.dataset.target || 0);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1400;
+  const start = performance.now();
+
+  function update(now){
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = target * eased;
+    el.textContent = Math.round(value) + suffix;
+    if(progress < 1){
+      requestAnimationFrame(update);
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
 // Reveal on scroll animation
 const revealObserver = new IntersectionObserver((entries)=>{
   entries.forEach(en=>{
@@ -100,6 +119,17 @@ const revealObserver = new IntersectionObserver((entries)=>{
 },{threshold:.15});
 
 document.querySelectorAll('[data-reveal]').forEach(el=>revealObserver.observe(el));
+
+const counterObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:.7});
+
+document.querySelectorAll('.counter-num').forEach(el => counterObserver.observe(el));
 
 // Optional: Close lightbox with Escape key
 document.addEventListener('keydown', (e)=>{
