@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>St Maria Goretti Girls Grammar School</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div id="welcomeModal" class="modal">
+  <div class="modal-bg" onclick="closeWelcome()"></div>
+  <div class="modal-box">
+    <div class="modal-inner">
+      <button class="close" onclick="closeWelcome()">✕</button>
+      <div class="blur-circle top"></div>
+      <div class="blur-circle bottom"></div>
+      <div class="badge"><span class="dot"></span> Est. 1962 • Faith & Excellence</div>
+      <h2 class="serif welcome-title">Welcome to my school<br><span>St Maria Goretti Girls Grammar School</span></h2>
+      <p class="welcome-text">We're delighted to have you here. A place where young women are shaped by grace, intellect and courage — since 1962.</p>
+      <div class="welcome-actions">
+        <button onclick="closeWelcome('about')" class="btn btn-primary">Explore School</button>
+        <button onclick="closeWelcome()" class="btn btn-outline">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="header" class="header">
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <div class="logo">MG</div>
+      <div class="logo-text">
+        <div class="serif logo-title">St Maria Goretti</div>
+        <div class="logo-sub">Girls Grammar School</div>
+      </div>
+    </div>
+    <nav id="desktopNav" class="desktop-nav">
+      <span class="nav-link" onclick="scrollToId('home')">Home</span>
+      <span class="nav-link" onclick="scrollToId('about')">About</span>
+      <span class="nav-link" onclick="scrollToId('academics')">Academics</span>
+      <span class="nav-link" onclick="scrollToId('admissions')">Admissions</span>
+      <span class="nav-link" onclick="scrollToId('campus')">Campus</span>
+      <span class="nav-link" onclick="scrollToId('contact')">Contact</span>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-primary" id="applyBtn" onclick="scrollToId('admissions')">Apply Now</button>
+      <button onclick="toggleMenu()" class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu" class="mobile-menu">
+  <div class="mobile-top"><strong class="serif">Menu</strong><button class="close static" onclick="toggleMenu()">✕</button></div>
+  <div class="mobile-links">
+    <span class="nav-link large" onclick="scrollToId('home');toggleMenu()">Home</span>
+    <span class="nav-link large" onclick="scrollToId('about');toggleMenu()">About</span>
+    <span class="nav-link large" onclick="scrollToId('academics');toggleMenu()">Academics</span>
+    <span class="nav-link large" onclick="scrollToId('admissions');toggleMenu()">Admissions</span>
+    <span class="nav-link large" onclick="scrollToId('campus');toggleMenu()">Campus</span>
+    <span class="nav-link large" onclick="scrollToId('contact');toggleMenu()">Contact</span>
+    <button class="btn btn-primary mt-20" onclick="scrollToId('admissions');toggleMenu()">Apply Now</button>
+  </div>
+</div>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <div data-reveal>
+    <div class="badge"><span class="dot"></span> Admissions Open 2026/2027 • Limited Slots</div>
+    <h1 class="serif hero-title">Empowering Young Women Through<br><span>Excellence, Faith & Grace</span></h1>
+    <p class="hero-desc">A Catholic boarding school where academic distinction meets character formation. Raising leaders, scholars, and women of virtue since 1962.</p>
+    <div class="hero-btns">
+      <button class="btn btn-primary" onclick="scrollToId('admissions')">Start Admission</button>
+      <button class="btn btn-outline" onclick="scrollToId('about')">Take a Virtual Tour →</button>
+    </div>
+    <div id="counter" class="counter">
+      <div><div class="serif counter-num">1962</div><div class="counter-label">Established</div></div>
+      <div><div class="serif counter-num">1200+</div><div class="counter-label">Students</div></div>
+      <div><div class="serif counter-num">98%</div><div class="counter-label">University Placement</div></div>
+    </div>
+  </div>
+  <div data-reveal class="hero-visual">
+    <div class="card hero-card">
+      <div class="hero-image">
+        <div><div class="hero-emoji">🎓</div><div class="serif hero-image-title">Our Girls Lead</div><div class="hero-image-sub">Debate champions • STEM Olympiad winners • Faith in action</div></div>
+      </div>
+      <div class="hero-mini-grid">
+        <div class="mini-card light"><div class="mini-title">HOSTEL LIFE</div><div class="mini-desc">Safe, serene, sisterhood</div></div>
+        <div class="mini-card dark"><div class="mini-title">FAITH FORMATION</div><div class="mini-desc">Daily Mass & mentorship</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section-white">
+  <div class="container">
+    <div data-reveal class="section-head">
+      <div><div class="badge">Our Foundation</div><h2 class="serif section-title">Rooted in Faith,<br>Rising in Excellence</h2></div>
+      <p class="section-para">Founded by the Sisters of Charity, St Maria Goretti has formed generations of women who lead with intellect and integrity.</p>
+    </div>
+    <div class="grid4">
+      <div class="card value-card" data-reveal><div class="icon">✝️</div><h3>Faith</h3><p>Daily spiritual formation, values-based leadership and service to humanity.</p></div>
+      <div class="card value-card" data-reveal><div class="icon">📚</div><h3>Excellence</h3><p>Rigorous academics, critical thinking, and university-ready preparation.</p></div>
+      <div class="card value-card" data-reveal><div class="icon">🤝</div><h3>Sisterhood</h3><p>A lifelong bond of support, mentorship and shared purpose.</p></div>
+      <div class="card value-card" data-reveal><div class="icon">👑</div><h3>Leadership</h3><p>Confident voices, public speaking, entrepreneurship & governance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Academics -->
+<section id="academics" class="section-cream">
+  <div class="container">
+    <div data-reveal><div class="badge">Academics</div><h2 class="serif section-title">A Curriculum for the Future</h2></div>
+    <div class="grid3">
+      <div class="card academic-card" data-reveal><div class="academic-icon maroon">JSS</div><h3>Junior Secondary (JSS1-3)</h3><p>Strong foundation in English, Mathematics, Basic Sciences, French, and Moral Instruction. Coding club from JSS1.</p><ul><li>• Entrance Exam + Interview</li><li>• Class size: 25</li><li>• Full boarding</li></ul></div>
+      <div class="card academic-card dark" data-reveal><div class="academic-icon white">SS</div><h3>Senior Secondary (SS1-3)</h3><p>WAEC, NECO, JAMB, SAT prep. Science, Arts, Commercial tracks. 1:1 university counselling.</p><ul><li>• 98% distinction rate</li><li>• 15+ Olympiad medals 2025</li><li>• Leadership program</li></ul></div>
+      <div class="card academic-card" data-reveal><div class="academic-icon gold">STEM</div><h3>STEM & Arts Academy</h3><p>Robotics lab, creative arts studio, music conservatory, entrepreneurship hub.</p><ul><li>• Robotics & AI Club</li><li>• Goretti Chamber Orchestra</li><li>• Business Incubator</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- Admissions -->
+<section id="admissions" class="admissions-banner">
+  <div class="container admissions-inner">
+    <div><h2 class="serif">Admissions 2026/2027 are now open</h2><p>Entrance exam: March 14, 2026 • Apply before Feb 28 • Scholarships available</p></div>
+    <div class="admissions-btns"><button class="btn btn-white" onclick="alert('Application portal opens soon. Contact registrar@stmariagoretti.edu.ng')">Download Form</button><button class="btn btn-ghost" onclick="scrollToId('contact')">Talk to Registrar</button></div>
+  </div>
+</section>
+
+<!-- Campus -->
+<section id="campus" class="section-cream">
+  <div class="container">
+    <div data-reveal><div class="badge">Campus Life</div><h2 class="serif section-title">Where Girls Thrive</h2></div>
+    <div class="grid3 campus-grid">
+      <div class="card facility" data-reveal><div class="facility-img pink">📖</div><h3>Library & Learning Commons</h3><p>12,000+ books, e-library, quiet pods</p></div>
+      <div class="card facility" data-reveal><div class="facility-img blue">🔬</div><h3>Science Labs</h3><p>Physics, Chemistry, Biology, Robotics</p></div>
+      <div class="card facility" data-reveal><div class="facility-img beige">🏠</div><h3>Serene Hostels</h3><p>4-bed en-suite, housemistresses 24/7</p></div>
+      <div class="card facility" data-reveal><div class="facility-img green">⛪</div><h3>Chapel of St Maria</h3><p>Daily mass, reflection, choir</p></div>
+      <div class="card facility" data-reveal><div class="facility-img rose">🏐</div><h3>Sports Complex</h3><p>Volleyball, athletics, swimming</p></div>
+      <div class="card facility" data-reveal><div class="facility-img lightblue">💻</div><h3>ICT Center</h3><p>Apple lab, coding, solar-powered</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="section-white">
+  <div class="container">
+    <div class="grid2">
+      <div data-reveal class="card principal-card"><div class="badge">Principal's Message</div><h3 class="serif principal-quote">“We do not just teach girls; we form women who will heal the world.”</h3><p>At Goretti, discipline is love in action. Every girl is known, seen, and called to greatness. Our alumnae are doctors, judges, engineers and mothers of faith — proof that grace and excellence can live together.</p><div class="principal"><div class="principal-avatar"></div><div><div class="principal-name">Rev. Sr. Dr. Agnes Okonkwo</div><div class="principal-role">Principal • 18 years of service</div></div></div></div>
+      <div data-reveal class="gallery-grid">
+        <div onclick="openLight('Science Fair 2025 - Our girls won gold')" class="gallery-item maroon">Science Fair</div>
+        <div onclick="openLight('Chapel Choir - Voices of grace')" class="gallery-item gold">Choir</div>
+        <div onclick="openLight('Inter-House Sports 2025')" class="gallery-item dark">Sports Day</div>
+        <div onclick="openLight('Boarding Life - Sisterhood')" class="gallery-item muted">Hostel Life</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section-cream">
+  <div class="container grid2">
+    <div data-reveal>
+      <div class="badge">Visit Us</div>
+      <h2 class="serif section-title">Come and see where grace lives</h2>
+      <div class="card contact-map">
+        <div class="map-placeholder">🗺️ Campus Map • 24-Acre Serene Grounds</div>
+        <div class="map-tags"><span>24/7 Security</span><span>Solar Powered</span></div>
+        <div class="contact-info">📍 Km 8 Benin-Auchi Road, Edo State<br>📞 +234 803 123 4567<br>✉️ registrar@stmariagoretti.edu.ng</div>
+      </div>
+    </div>
+    <div data-reveal class="card contact-form-card">
+      <h3 class="serif">Send us a message</h3><p class="form-sub">Admissions team responds within 24 hours.</p>
+      <form id="contactForm" onsubmit="handleContact(event)">
+        <div class="form-row"><input name="name" required placeholder="Parent / Guardian Name"><input name="email" type="email" required placeholder="Email"></div>
+        <select name="interest"><option>JSS1 Admission</option><option>SS1 Transfer</option><option>Campus Tour</option><option>Scholarship</option></select>
+        <textarea name="message" required placeholder="Tell us about your daughter..."></textarea>
+        <button class="btn btn-primary full">Send Message</button>
+        <div id="contactStatus" class="form-status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><div class="logo-wrap"><div class="logo white">MG</div><div><div class="serif footer-logo-title">St Maria Goretti</div><div class="footer-logo-sub">GIRLS GRAMMAR SCHOOL</div></div></div><p class="footer-desc">Forming young women of faith, intellect and courage since 1962. Veritas, Gratia, Excellentia.</p></div>
+    <div><div class="footer-head">ACADEMICS</div><div class="footer-links">Junior Secondary<br>Senior Secondary<br>STEM Academy<br>University Placement</div></div>
+    <div><div class="footer-head">CAMPUS</div><div class="footer-links">Hostels<br>Library<br>Chapel<br>Sports</div></div>
+    <div><div class="footer-head">ADMISSIONS</div><div class="footer-links">How to Apply<br>Fees & Scholarships<br>Entrance Exam<br>Contact Registrar</div></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 St Maria Goretti Girls Grammar School. All rights reserved.</span><span>Privacy • Terms • Safeguarding</span></div>
+</footer>
+
+<div id="lightbox" class="lightbox" onclick="this.style.display='none'"><div id="lightboxText" class="card lightbox-box"></div></div>
+
+<script src="index.js"></script>
+</body>
+</html>
