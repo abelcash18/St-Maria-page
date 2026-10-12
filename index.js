@@ -140,6 +140,7 @@ function animateValue(el) {
 
 // 6. Scroll Reveal Animation
 function initScrollReveal() {
+  document.body.classList.add('js-loaded');
   const revealElements = document.querySelectorAll('[data-reveal]');
   if (!revealElements.length) return;
 
@@ -150,9 +151,16 @@ function initScrollReveal() {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { rootMargin: '0px 0px 200px 0px', threshold: 0.01 });
 
-  revealElements.forEach(el => observer.observe(el));
+  revealElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight + 250) {
+      el.classList.add('reveal-in');
+    } else {
+      observer.observe(el);
+    }
+  });
 }
 
 // 7. Lightbox for Galleries
