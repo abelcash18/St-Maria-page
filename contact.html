@@ -3,96 +3,405 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | St Maria Goretti</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Contact & Visit Us | St Maria Goretti Girls' Grammar School</title>
+  <meta name="description" content="Get in touch with the admissions registry, book a campus tour, or reach the principal's office at St Maria Goretti Girls' Grammar School, Benin City, Edo State.">
+  <link rel="icon" type="image/svg+xml" href="images/crest.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <style>
+    .dept-card {
+      padding: 24px;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-fast);
+    }
+    .dept-card:hover {
+      border-color: var(--border-gold);
+      transform: translateY(-2px);
+    }
+    .map-container {
+      background: linear-gradient(135deg, var(--navy-surface) 0%, var(--navy-deep) 100%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .faq-q {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .faq-a {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+  </style>
 </head>
 <body>
-  <header id="header" class="header">
-    <div class="header-inner">
-      <div class="logo-wrap">
-        <div class="logo">MG</div>
-        <div class="logo-text">
-          <div class="serif logo-title">St Maria Goretti</div>
-          <div class="logo-sub">Girls Grammar School</div>
-        </div>
+
+  <!-- Top Utility Bar -->
+  <aside class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-info">
+        <span>📍 Km 8 Benin-Auchi Road, Benin City, Edo State</span>
+        <span>📞 <a href="tel:+2348031234567">+234 803 123 4567</a></span>
+        <span>✉️ <a href="mailto:admissions@stmariagoretti.edu.ng">admissions@stmariagoretti.edu.ng</a></span>
       </div>
-      <nav class="desktop-nav">
-        <span class="nav-link" onclick="window.location.href='index.html'">Home</span>
-        <span class="nav-link" onclick="window.location.href='about.html'">About</span>
-        <span class="nav-link" onclick="window.location.href='academics.html'">Academics</span>
-        <span class="nav-link" onclick="window.location.href='admissions.html'">Admissions</span>
-        <span class="nav-link" onclick="window.location.href='gallery.html'">Campus</span>
-        <span class="nav-link" onclick="window.location.href='contact.html'">Contact</span>
+      <div class="top-bar-links">
+        <a href="admissions.html">Entrance Exam: March 14, 2026</a>
+        <a href="contact.html">Campus Tour</a>
+        <span class="portal-tag">Parent Portal</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrap" aria-label="St Maria Goretti Home">
+        <img src="images/crest.svg" alt="St Maria Goretti School Crest" class="logo-crest">
+        <div class="logo-text">
+          <span class="logo-title">St. Maria Goretti</span>
+          <span class="logo-sub">Girls' Grammar School • Est. 1962</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="gallery.html" class="nav-link">Campus Life</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
       </nav>
+
       <div class="header-actions">
-        <button class="btn btn-primary" onclick="window.location.href='admissions.html'">Apply Now</button>
+        <a href="admissions.html" class="btn btn-gold" id="applyBtn">Apply for 2026/27</a>
+        <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Toggle mobile menu">☰</button>
       </div>
     </div>
   </header>
 
-  <main class="page-shell">
-    <section class="page-hero">
-      <div class="container page-hero-inner">
-        <div>
-          <div class="page-tag"><span class="dot"></span> Contact</div>
-          <h1 class="serif hero-title">We would love to hear from you</h1>
-          <p class="hero-desc">Whether you are enquiring about admissions, school visits or scholarships, our team is ready to help.</p>
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer">
+      <div class="mobile-top">
+        <div class="logo-wrap">
+          <img src="images/crest.svg" alt="Crest" style="width:36px; height:42px;">
+          <div class="logo-text">
+            <span class="logo-title" style="font-size:15px;">St. Maria Goretti</span>
+            <span class="logo-sub" style="font-size:9.5px;">Grammar School</span>
+          </div>
         </div>
-        <div class="page-side-card card">
-          <h3 class="serif">Quick details</h3>
-          <ul>
-            <li>Admissions line: +234 803 123 4567</li>
-            <li>Email: registrar@stmariagoretti.edu.ng</li>
-            <li>Campus: Km 8 Benin-Auchi Road, Edo State</li>
-          </ul>
+        <button class="close-btn" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mobile-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="gallery.html" class="nav-link">Campus Life</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="admissions.html" class="btn btn-gold full" style="margin-top:16px;">Apply Now</a>
+      </div>
+      <div class="mobile-footer-info">
+        <p><strong>Registry Office:</strong></p>
+        <p>📞 +234 803 123 4567</p>
+        <p>admissions@stmariagoretti.edu.ng</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Subpage Hero -->
+    <section class="subpage-hero">
+      <div class="container subpage-hero-inner">
+        <div>
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a> <span>/</span> <span>Contact</span>
+          </div>
+          <h1 class="serif subpage-title">We Welcome Your Enquiries & Visits</h1>
+          <p class="subpage-desc">
+            Whether you are exploring admissions for your daughter, requesting academic transcripts, or scheduling a visit to our historic campus, our administrative team is here to assist you.
+          </p>
+        </div>
+        <div class="card" style="padding:28px; background:rgba(255,255,255,0.06); border-color:rgba(197,160,89,0.3); color:#fff; backdrop-filter:blur(10px);">
+          <div class="badge badge-light" style="margin-bottom:12px;">Office Hours</div>
+          <h3 class="serif" style="color:var(--gold-light); font-size:22px; margin-bottom:8px;">Monday – Friday</h3>
+          <p style="font-size:14px; color:rgba(255,255,255,0.85); line-height:1.7;">
+            8:00 AM – 4:00 PM (West Africa Time). Saturday visits strictly by prior appointment with the Registrar.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="section-cream">
-      <div class="container contact-layout">
-        <div class="card contact-form-card" data-reveal>
-          <h3 class="serif">Send us a message</h3>
-          <p class="form-sub">We usually respond within 24 hours.</p>
-          <form id="contactForm" onsubmit="handleContact(event)">
-            <div class="form-row"><input name="name" required placeholder="Your Name"><input name="email" type="email" required placeholder="Email"></div>
-            <div class="form-row"><input name="phone" placeholder="Phone Number"><input name="subject" placeholder="Subject"></div>
-            <textarea name="message" required placeholder="Write your message..."></textarea>
-            <button class="btn btn-primary full">Send Message</button>
-            <div id="contactStatus" class="form-status"></div>
-          </form>
+    <!-- Department Directory Strip -->
+    <section class="section-white">
+      <div class="container">
+        <div class="section-head-center" data-reveal style="margin-bottom:40px;">
+          <div class="badge badge-navy">Administrative Directory</div>
+          <h2 class="serif section-title">Department Contacts</h2>
+          <p class="section-subtitle">Reach out directly to the appropriate school office for expedited assistance.</p>
         </div>
-        <div class="card info-card" data-reveal>
-          <div class="badge">Visit our school</div>
-          <h3 class="serif">Campus address</h3>
-          <ul class="contact-list">
-            <li>📍 Km 8 Benin-Auchi Road, Edo State</li>
-            <li>📞 +234 803 123 4567</li>
-            <li>✉️ registrar@stmariagoretti.edu.ng</li>
-            <li>⏰ Mon - Fri: 8:00am - 4:00pm</li>
-          </ul>
-          <div class="map-box" style="margin-top:18px;">Campus Map</div>
+
+        <div class="grid-4" data-reveal>
+          <div class="dept-card">
+            <div class="pillar-icon-box" style="margin-bottom:14px;">🎓</div>
+            <h4 class="serif" style="font-size:18px;">Admissions & Registry</h4>
+            <p style="font-size:13px; color:var(--text-muted); margin:6px 0 12px;">Application forms, entrance examinations & transfers.</p>
+            <p style="font-size:13.5px; font-weight:600; color:var(--navy);">📞 +234 803 123 4567</p>
+            <p style="font-size:13px; color:var(--gold-dark);">✉️ admissions@stmariagoretti.edu.ng</p>
+          </div>
+
+          <div class="dept-card">
+            <div class="pillar-icon-box" style="margin-bottom:14px;">🏛️</div>
+            <h4 class="serif" style="font-size:18px;">Principal's Office</h4>
+            <p style="font-size:13px; color:var(--text-muted); margin:6px 0 12px;">Official governance, appointments & diocesan matters.</p>
+            <p style="font-size:13.5px; font-weight:600; color:var(--navy);">📞 +234 802 345 6789</p>
+            <p style="font-size:13px; color:var(--gold-dark);">✉️ principal@stmariagoretti.edu.ng</p>
+          </div>
+
+          <div class="dept-card">
+            <div class="pillar-icon-box" style="margin-bottom:14px;">💳</div>
+            <h4 class="serif" style="font-size:18px;">Bursary & Accounts</h4>
+            <p style="font-size:13px; color:var(--text-muted); margin:6px 0 12px;">Fee schedules, invoices, receipts & scholarship funds.</p>
+            <p style="font-size:13.5px; font-weight:600; color:var(--navy);">📞 +234 805 678 9012</p>
+            <p style="font-size:13px; color:var(--gold-dark);">✉️ bursary@stmariagoretti.edu.ng</p>
+          </div>
+
+          <div class="dept-card">
+            <div class="pillar-icon-box" style="margin-bottom:14px;">🏠</div>
+            <h4 class="serif" style="font-size:18px;">Boarding & Pastoral</h4>
+            <p style="font-size:13px; color:var(--text-muted); margin:6px 0 12px;">Hostel welfare, visiting Sunday permissions & healthcare.</p>
+            <p style="font-size:13.5px; font-weight:600; color:var(--navy);">📞 +234 807 890 1234</p>
+            <p style="font-size:13px; color:var(--gold-dark);">✉️ hostel@stmariagoretti.edu.ng</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Form and Map Location Section -->
+    <section class="section-cream">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Form -->
+          <div class="form-card" data-reveal>
+            <div class="badge badge-navy" style="margin-bottom:12px;">Get In Touch</div>
+            <h3 class="serif" style="font-size:26px; margin-bottom:8px;">Send a Message or Book a Tour</h3>
+            <p style="font-size:14px; color:var(--text-secondary); margin-bottom:24px;">Our administrative registry responds to all messages within 24 business hours.</p>
+
+            <form id="contactPageForm" onsubmit="return handleFormSubmit(event, 'Message to School Registry')">
+              <div class="form-group-row">
+                <div class="form-field">
+                  <label class="form-label" for="contactName">Your Full Name *</label>
+                  <input type="text" id="contactName" name="name" required placeholder="e.g. Mrs. Ngozi Adeleke">
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="contactEmail">Email Address *</label>
+                  <input type="email" id="contactEmail" name="email" required placeholder="ngozi@domain.com">
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-field">
+                  <label class="form-label" for="contactPhone">Phone / WhatsApp *</label>
+                  <input type="tel" id="contactPhone" name="phone" required placeholder="+234 800 000 0000">
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="contactSubject">Subject / Nature of Inquiry *</label>
+                  <select id="contactSubject" name="subject" required>
+                    <option value="Admissions 2026/2027 Inquiries">Admissions 2026/2027 Inquiries</option>
+                    <option value="Schedule a Guided Campus Tour">Schedule a Guided Campus Tour</option>
+                    <option value="Fees, Payment & Scholarship Inquiry">Fees, Payment & Scholarship Inquiry</option>
+                    <option value="Boarding Hostel & Student Welfare">Boarding Hostel & Student Welfare</option>
+                    <option value="Academic Transcript / Alumnae Verification">Academic Transcript / Alumnae Verification</option>
+                    <option value="General Administration / Other">General Administration / Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field" style="margin-bottom:24px;">
+                <label class="form-label" for="contactMessage">Your Message *</label>
+                <textarea id="contactMessage" name="message" required placeholder="Write your message or requested tour dates here..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary full" style="height:50px;">Send Message to Registry</button>
+              <div class="form-status" id="formStatus"></div>
+            </form>
+          </div>
+
+          <!-- Location & Transit Card -->
+          <div class="map-container" data-reveal>
+            <div>
+              <div class="badge badge-light" style="margin-bottom:12px;">Physical Address</div>
+              <h3 class="serif" style="font-size:26px; color:#fff; margin-bottom:12px;">How to Reach Our Campus</h3>
+              <p style="color:rgba(255,255,255,0.85); font-size:14.5px; line-height:1.7; margin-bottom:28px;">
+                St. Maria Goretti Girls' Grammar School is situated along the historic Benin-Auchi corridor in Benin City, easily accessible from the airport and interstate bus terminals.
+              </p>
+
+              <div class="contact-detail-list">
+                <div class="contact-item">
+                  <div class="contact-icon">📍</div>
+                  <div>
+                    <div class="contact-item-title">School Campus Grounds</div>
+                    <div class="contact-item-val">Km 8 Benin-Auchi Road, Ikpoba Okha LGA, Benin City, Edo State, Nigeria</div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">✈️</div>
+                  <div>
+                    <div class="contact-item-title">From Benin Airport (BNI)</div>
+                    <div class="contact-item-val">Approx. 20–25 minutes drive via Airport Road and Sapele Road bypass</div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">⛪</div>
+                  <div>
+                    <div class="contact-item-title">Diocesan Affiliation</div>
+                    <div class="contact-item-val">Catholic Archdiocese of Benin City</div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">🛡️</div>
+                  <div>
+                    <div class="contact-item-title">Visitor Security Protocol</div>
+                    <div class="contact-item-val">All visitors must present valid national ID at the main gate security lodge upon arrival</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top:32px;">
+                <a href="https://maps.google.com/?q=St+Maria+Goretti+Girls+Grammar+School+Benin+City" target="_blank" rel="noopener noreferrer" class="btn btn-gold full">
+                  Open Campus on Google Maps ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions (FAQ) -->
+    <section class="section-white">
+      <div class="container" style="max-width:860px;">
+        <div class="section-head-center" data-reveal>
+          <div class="badge badge-navy">Clear Answers</div>
+          <h2 class="serif section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Common queries from prospective families regarding boarding life, academics, and exams.</p>
+        </div>
+
+        <div data-reveal>
+          <div class="faq-item">
+            <h4 class="faq-q">Are non-Catholic students accepted at St Maria Goretti?</h4>
+            <p class="faq-a">
+              Yes. While St Maria Goretti is proudly Catholic in ethos, tradition, and spiritual daily practice, we warmly welcome students of all Christian denominations and diverse faiths who are willing to respect our school code of conduct and moral standards.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4 class="faq-q">Can day students enroll, or is boarding compulsory?</h4>
+            <p class="faq-a">
+              Full boarding is strongly recommended for holistic character formation, academic study prep, and sisterhood bonding. However, day student enrollment is available for families residing in Benin City who can guarantee punctual arrival for 7:30 AM assembly.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4 class="faq-q">What are the security measures protecting students?</h4>
+            <p class="faq-a">
+              Our 24-acre campus is fully perimeter-walled with 24/7 armed security guards, solar-powered lighting, electronic visitor registration, and resident Reverend Sisters and Housemistresses living within each boarding hostel quadrangle.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4 class="faq-q">How does the school prepare students for international university admissions?</h4>
+            <p class="faq-a">
+              Our Academic Guidance Directorate runs SAT and IELTS preparatory clinics, Model UN competitions, and personal essay workshops. Our alumnae currently study at top collegiate institutions in the UK, Canada, the United States, and across Africa.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Authoritative Footer -->
   <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="logo-wrap"><div class="logo white">MG</div><div><div class="serif footer-logo-title">St Maria Goretti</div><div class="footer-logo-sub">GIRLS GRAMMAR SCHOOL</div></div></div>
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/crest.svg" alt="School Crest" class="footer-crest">
+          <div>
+            <div class="footer-brand-title">St. Maria Goretti</div>
+            <div class="footer-brand-sub">Girls' Grammar School</div>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Forming virtuous, academically distinguished, and confident young women in the Catholic tradition since 1962.
+        </p>
+        <span class="motto-banner">Veritas • Gratia • Excellentia</span>
       </div>
+
       <div>
-        <div class="footer-head">CONTACT</div>
-        <div class="footer-links">+234 803 123 4567<br>registrar@stmariagoretti.edu.ng</div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="about.html">About & Heritage</a></li>
+          <li><a href="academics.html">Academic Curriculum</a></li>
+          <li><a href="admissions.html">Admissions 2026/27</a></li>
+          <li><a href="gallery.html">Campus Life & Labs</a></li>
+          <li><a href="contact.html">Contact & Directions</a></li>
+        </ul>
       </div>
+
       <div>
-        <div class="footer-head">ADDRESS</div>
-        <div class="footer-links">Km 8 Benin-Auchi Road<br>Edo State, Nigeria</div>
+        <h4 class="footer-col-title">School Life</h4>
+        <ul class="footer-links-list">
+          <li><a href="academics.html#jss">Junior Secondary</a></li>
+          <li><a href="academics.html#sss">Senior Secondary</a></li>
+          <li><a href="gallery.html">Boarding Hostels</a></li>
+          <li><a href="gallery.html">Chapel & Daily Mass</a></li>
+          <li><a href="admissions.html#fees">Scholarships Fund</a></li>
+          <li><a href="contact.html#visit">Schedule a Visit</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4 class="footer-col-title">Newsletter</h4>
+        <p>Subscribe to the monthly Goretti Gazette for academic updates and school notices.</p>
+        <form onsubmit="return handleNewsletter(event)" class="newsletter-box">
+          <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+          <button type="submit" class="btn btn-gold" style="height:44px; padding:0 18px; font-size:13px;">Join</button>
+        </form>
       </div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 St Maria Goretti Girls Grammar School</span><span>Privacy • Terms</span></div>
+
+    <div class="container footer-bottom">
+      <div>
+        © 2026 St. Maria Goretti Girls' Grammar School. All Rights Reserved.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="about.html">Safeguarding Policy</a>
+        <a href="about.html">Privacy & Terms</a>
+        <a href="admissions.html">Prospectus</a>
+      </div>
+    </div>
   </footer>
 
   <script src="index.js"></script>

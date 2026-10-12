@@ -3,111 +3,354 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academics | St Maria Goretti</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Academics & Curriculum | St Maria Goretti Girls' Grammar School</title>
+  <meta name="description" content="Explore the rigorous curriculum, pure sciences, arts, commercial pathways, STEM labs, and distinction-grade exam prep at St Maria Goretti Girls' Grammar School.">
+  <link rel="icon" type="image/svg+xml" href="images/crest.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <header id="header" class="header">
-    <div class="header-inner">
-      <div class="logo-wrap">
-        <div class="logo">MG</div>
-        <div class="logo-text">
-          <div class="serif logo-title">St Maria Goretti</div>
-          <div class="logo-sub">Girls Grammar School</div>
-        </div>
+
+  <!-- Top Utility Bar -->
+  <aside class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-info">
+        <span>📍 Km 8 Benin-Auchi Road, Benin City, Edo State</span>
+        <span>📞 <a href="tel:+2348031234567">+234 803 123 4567</a></span>
+        <span>✉️ <a href="mailto:admissions@stmariagoretti.edu.ng">admissions@stmariagoretti.edu.ng</a></span>
       </div>
-      <nav class="desktop-nav">
-        <span class="nav-link" onclick="window.location.href='index.html'">Home</span>
-        <span class="nav-link" onclick="window.location.href='about.html'">About</span>
-        <span class="nav-link" onclick="window.location.href='academics.html'">Academics</span>
-        <span class="nav-link" onclick="window.location.href='admissions.html'">Admissions</span>
-        <span class="nav-link" onclick="window.location.href='gallery.html'">Campus</span>
-        <span class="nav-link" onclick="window.location.href='contact.html'">Contact</span>
+      <div class="top-bar-links">
+        <a href="admissions.html">Entrance Exam: March 14, 2026</a>
+        <a href="contact.html">Campus Tour</a>
+        <span class="portal-tag">Parent Portal</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrap" aria-label="St Maria Goretti Home">
+        <img src="images/crest.svg" alt="St Maria Goretti School Crest" class="logo-crest">
+        <div class="logo-text">
+          <span class="logo-title">St. Maria Goretti</span>
+          <span class="logo-sub">Girls' Grammar School • Est. 1962</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="academics.html" class="nav-link active">Academics</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="gallery.html" class="nav-link">Campus Life</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
+
       <div class="header-actions">
-        <button class="btn btn-primary" onclick="window.location.href='admissions.html'">Apply Now</button>
+        <a href="admissions.html" class="btn btn-gold" id="applyBtn">Apply for 2026/27</a>
+        <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Toggle mobile menu">☰</button>
       </div>
     </div>
   </header>
 
-  <main class="page-shell">
-    <section class="page-hero">
-      <div class="container page-hero-inner">
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer">
+      <div class="mobile-top">
+        <div class="logo-wrap">
+          <img src="images/crest.svg" alt="Crest" style="width:36px; height:42px;">
+          <div class="logo-text">
+            <span class="logo-title" style="font-size:15px;">St. Maria Goretti</span>
+            <span class="logo-sub" style="font-size:9.5px;">Grammar School</span>
+          </div>
+        </div>
+        <button class="close-btn" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mobile-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="academics.html" class="nav-link active">Academics</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="gallery.html" class="nav-link">Campus Life</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="admissions.html" class="btn btn-gold full" style="margin-top:16px;">Apply Now</a>
+      </div>
+      <div class="mobile-footer-info">
+        <p><strong>Enquiries:</strong> +234 803 123 4567</p>
+        <p>admissions@stmariagoretti.edu.ng</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Subpage Hero -->
+    <section class="subpage-hero">
+      <div class="container subpage-hero-inner">
         <div>
-          <div class="page-tag"><span class="dot"></span> Academics</div>
-          <h1 class="serif hero-title">Strong academics, confident learners, powerful futures</h1>
-          <p class="hero-desc">We blend rigorous scholarship with personal guidance, helping every student uncover her strengths and reach her full potential.</p>
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a> <span>/</span> <span>Academics</span>
+          </div>
+          <h1 class="serif subpage-title">Scholarly Rigour, Innovation & Distinction</h1>
+          <p class="subpage-desc">
+            We provide a dual curriculum designed to stimulate inquisitive intellects, build analytical reasoning, and prepare young women for the world's most prestigious collegiate institutions.
+          </p>
         </div>
-        <div class="page-side-card card">
-          <h3 class="serif">Academic promise</h3>
-          <ul>
-            <li>WAEC, NECO and JAMB preparation</li>
-            <li>STEM and creative excellence</li>
-            <li>University guidance and mentoring</li>
-          </ul>
+        <div class="card" style="padding:28px; background:rgba(255,255,255,0.06); border-color:rgba(197,160,89,0.3); color:#fff; backdrop-filter:blur(10px);">
+          <div class="badge badge-light" style="margin-bottom:12px;">Distinction Record</div>
+          <h3 class="serif" style="color:var(--gold-light); font-size:22px; margin-bottom:8px;">100% WASSCE Pass Rate</h3>
+          <p style="font-size:14px; color:rgba(255,255,255,0.85); line-height:1.7;">
+            Over 94% of our graduating class achieve A1–B3 distinctions across Mathematics, English, Sciences, and Humanities annually.
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- Junior Secondary School Section -->
+    <section class="section-white" id="jss">
+      <div class="container">
+        <div class="grid-2" style="align-items:center;">
+          <div data-reveal>
+            <div class="badge badge-navy">Foundational Level</div>
+            <h2 class="serif section-title" style="margin-bottom:18px;">Junior Secondary School (JSS 1 – JSS 3)</h2>
+            <p style="color:var(--text-secondary); font-size:15px; line-height:1.8; margin-bottom:16px;">
+              The junior years at Goretti cultivate curiosity, strong study discipline, computational logic, and bilingual competence. Each student is exposed to a broad spectrum of disciplines before subject specialization in senior secondary.
+            </p>
+            <ul class="curriculum-list" style="margin-bottom:24px;">
+              <li><strong>Core Sciences:</strong> Basic Science, Basic Technology, Mathematics & ICT</li>
+              <li><strong>Languages:</strong> English Studies, French (Bilingual immersion), Literature</li>
+              <li><strong>Humanities & Arts:</strong> Social Studies, Civic Education, Cultural & Creative Arts, Music</li>
+              <li><strong>Vocational & Practical:</strong> Agricultural Science, Business Studies & Home Economics</li>
+              <li><strong>Moral Instruction:</strong> Catholic Ethics, Character Formation & Civics</li>
+            </ul>
+            <div style="background:var(--cream); padding:16px 20px; border-radius:var(--radius-md); border-left:3px solid var(--gold);">
+              <strong style="color:var(--navy); font-size:14px;">Culminates in:</strong>
+              <p style="font-size:13.5px; color:var(--text-secondary); margin-top:4px;">Basic Education Certificate Examination (BECE) with comprehensive career diagnostic evaluation.</p>
+            </div>
+          </div>
+
+          <div data-reveal>
+            <div class="hero-media-card" style="box-shadow:var(--shadow-lg);">
+              <img src="images/library.jpg" alt="Students in study commons" class="hero-img" style="height:400px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Senior Secondary School Section -->
+    <section class="section-cream" id="sss">
+      <div class="container">
+        <div class="section-head-center" data-reveal>
+          <div class="badge">Advanced Specialization</div>
+          <h2 class="serif section-title">Senior Secondary School Pathways (SS 1 – SS 3)</h2>
+          <p class="section-subtitle">Tailored academic pathways preparing girls for WAEC, NECO, UTME/JAMB, SAT, and university scholarships.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Science Department -->
+          <div class="card" style="padding:36px; border-top:4px solid var(--navy);" data-reveal>
+            <div class="pillar-icon-box">🔬</div>
+            <h3 class="serif" style="font-size:22px; margin-bottom:10px;">Department of Pure Sciences</h3>
+            <p style="font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:18px;">
+              For aspiring doctors, software engineers, biomedical researchers, and architects.
+            </p>
+            <ul class="curriculum-list" style="margin-bottom:20px;">
+              <li>Physics & Chemistry</li>
+              <li>Biology & Health Science</li>
+              <li>Further Mathematics</li>
+              <li>Technical Drawing & Data Processing</li>
+              <li>Robotics & AI Lab Practical</li>
+            </ul>
+            <span class="badge" style="font-size:11px;">15+ Olympiad Medals</span>
+          </div>
+
+          <!-- Arts & Humanities Department -->
+          <div class="card" style="padding:36px; border-top:4px solid var(--gold);" data-reveal>
+            <div class="pillar-icon-box">⚖️</div>
+            <h3 class="serif" style="font-size:22px; margin-bottom:10px;">Arts & Humanities</h3>
+            <p style="font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:18px;">
+              For future jurists, diplomats, authors, political scientists, and communication executives.
+            </p>
+            <ul class="curriculum-list" style="margin-bottom:20px;">
+              <li>Literature-in-English</li>
+              <li>Government & History</li>
+              <li>Christian Religious Studies (CRS)</li>
+              <li>Advanced French & Phonetics</li>
+              <li>Visual Arts & Music Performance</li>
+            </ul>
+            <span class="badge" style="font-size:11px;">National Debate Champions</span>
+          </div>
+
+          <!-- Commercial Department -->
+          <div class="card" style="padding:36px; border-top:4px solid var(--navy-surface);" data-reveal>
+            <div class="pillar-icon-box">📈</div>
+            <h3 class="serif" style="font-size:22px; margin-bottom:10px;">Commercial & Business</h3>
+            <p style="font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:18px;">
+              For future financial leaders, economists, chartered accountants, and tech entrepreneurs.
+            </p>
+            <ul class="curriculum-list" style="margin-bottom:20px;">
+              <li>Financial Accounting</li>
+              <li>Commerce & Marketing</li>
+              <li>Economics & Statistics</li>
+              <li>Bookkeeping & Office Practice</li>
+              <li>Business Enterprise Incubator</li>
+            </ul>
+            <span class="badge" style="font-size:11px;">Young Investor Honors</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEM & Practical Laboratories -->
+    <section class="section-white" id="enrichment">
+      <div class="container">
+        <div class="grid-2" style="align-items:center;">
+          <div data-reveal>
+            <div class="hero-media-card" style="box-shadow:var(--shadow-lg);">
+              <img src="images/science_lab.jpg" alt="Students conducting experiment in science laboratory" class="hero-img" style="height:420px;">
+            </div>
+          </div>
+
+          <div data-reveal>
+            <div class="badge badge-navy">Experimental Discovery</div>
+            <h2 class="serif section-title" style="margin-bottom:18px;">STEM & Research Innovation Center</h2>
+            <p style="color:var(--text-secondary); font-size:15px; line-height:1.8; margin-bottom:16px;">
+              At Goretti, science is not memorized from textbooks — it is explored, questioned, and demonstrated. Our modern laboratory wing houses individual Physics, Chemistry, Biology, and Robotics suites equipped with digital sensors and safety protocols.
+            </p>
+            <div class="grid-2" style="gap:16px; margin-bottom:24px;">
+              <div style="background:var(--cream); padding:16px; border-radius:var(--radius-md);">
+                <strong style="color:var(--navy); font-size:14px;">Robotics & Coding</strong>
+                <p style="font-size:13px; color:var(--text-muted); margin-top:4px;">Python, Arduino microcontrollers, automated drones, and web technologies.</p>
+              </div>
+              <div style="background:var(--cream); padding:16px; border-radius:var(--radius-md);">
+                <strong style="color:var(--navy); font-size:14px;">Science Olympiad</strong>
+                <p style="font-size:13px; color:var(--text-muted); margin-top:4px;">Specialized weekend masterclasses with distinguished national mentors.</p>
+              </div>
+            </div>
+            <a href="admissions.html" class="btn btn-gold">Join the Academic Vanguard</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Co-Curricular & Leadership Enrichment -->
     <section class="section-cream">
-      <div class="container feature-grid">
-        <div class="feature-card" data-reveal>
-          <div class="icon-badge">JSS</div>
-          <h3>Junior Secondary</h3>
-          <p>Structured learning in English, Mathematics, Sciences, Social Studies, French and ICT that builds academic confidence.</p>
+      <div class="container">
+        <div class="section-head-center" data-reveal>
+          <div class="badge">Beyond the Classroom</div>
+          <h2 class="serif section-title">Enrichment, Societies & Co-Curricular Life</h2>
+          <p class="section-subtitle">Intellectual development is coupled with arts, music, athletic discipline, and public service.</p>
         </div>
-        <div class="feature-card" data-reveal>
-          <div class="icon-badge">SS</div>
-          <h3>Senior Secondary</h3>
-          <p>Focused subject pathways in Science, Arts and Commercial studies with excellent exam preparation and career guidance.</p>
-        </div>
-        <div class="feature-card" data-reveal>
-          <div class="icon-badge">ST</div>
-          <h3>STEM & Arts</h3>
-          <p>Robotics, coding, creativity, debate, music and enterprise are integrated to unlock potential in every learner.</p>
-        </div>
-        <div class="feature-card" data-reveal>
-          <div class="icon-badge">UC</div>
-          <h3>University Readiness</h3>
-          <p>Personal counselling, exam tracking and leadership training prepare students for higher education and success.</p>
+
+        <div class="grid-4">
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">🎵</div>
+            <h3 class="serif">Goretti Chamber Choir</h3>
+            <p>Classical choral performance, Gregorian chants, violin, cello, and organ training performing at diocesan and national festivals.</p>
+          </div>
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">🗣️</div>
+            <h3 class="serif">Debate & Model UN</h3>
+            <p>Honing parliamentary argumentation, persuasive speech, geopolitical research, and critical thinking on global issues.</p>
+          </div>
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">🏐</div>
+            <h3 class="serif">Varsity Athletics</h3>
+            <p>Inter-house athletics, competitive volleyball, basketball, football, and table tennis instilling resilience and sportsmanship.</p>
+          </div>
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">🌱</div>
+            <h3 class="serif">Legion of Mary & St Vincent</h3>
+            <p>Spiritual devotion, visits to orphanages, medical outreach assistance, and Catholic charitable works across Edo State.</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- University Placement & Guidance -->
     <section class="section-white">
       <div class="container">
-        <div class="page-grid">
-          <div class="story-card" data-reveal>
-            <div class="badge">Learning Approach</div>
-            <h3 class="serif">Academic excellence with care and character</h3>
-            <p>Our teaching model combines subject mastery, interaction, mentorship and discipline. Lessons are enriched by active learning, regular assessment and personalized support.</p>
+        <div class="admissions-banner" data-reveal>
+          <div>
+            <div class="badge badge-light">Collegiate Pathway</div>
+            <h2 class="serif">1:1 University & Career Guidance Counselling</h2>
+            <p>
+              Every SS student receives dedicated university counselling, entrance exam bootcamps (UTME, SAT, IELTS), personal statement coaching, and scholarship application mentorship.
+            </p>
           </div>
-          <div class="story-card" data-reveal>
-            <div class="badge">Student Support</div>
-            <h3 class="serif">Every learner is guided</h3>
-            <p>Students benefit from close teacher support, tutorial sessions, reading culture and a structured environment that helps them perform at their best.</p>
+          <div class="admissions-banner-actions">
+            <a href="admissions.html" class="btn btn-gold">Begin Admission Journey</a>
+            <a href="contact.html" class="btn btn-ghost">Speak to Academic Dean</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Authoritative Footer -->
   <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="logo-wrap"><div class="logo white">MG</div><div><div class="serif footer-logo-title">St Maria Goretti</div><div class="footer-logo-sub">GIRLS GRAMMAR SCHOOL</div></div></div>
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/crest.svg" alt="School Crest" class="footer-crest">
+          <div>
+            <div class="footer-brand-title">St. Maria Goretti</div>
+            <div class="footer-brand-sub">Girls' Grammar School</div>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Forming virtuous, academically distinguished, and confident young women in the Catholic tradition since 1962.
+        </p>
+        <span class="motto-banner">Veritas • Gratia • Excellentia</span>
       </div>
+
       <div>
-        <div class="footer-head">ACADEMICS</div>
-        <div class="footer-links">Junior Secondary<br>Senior Secondary<br>STEM Academy</div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="about.html">About & Heritage</a></li>
+          <li><a href="academics.html">Academic Curriculum</a></li>
+          <li><a href="admissions.html">Admissions 2026/27</a></li>
+          <li><a href="gallery.html">Campus Life & Labs</a></li>
+          <li><a href="contact.html">Contact & Directions</a></li>
+        </ul>
       </div>
+
       <div>
-        <div class="footer-head">CONTACT</div>
-        <div class="footer-links">+234 803 123 4567<br>registrar@stmariagoretti.edu.ng</div>
+        <h4 class="footer-col-title">School Life</h4>
+        <ul class="footer-links-list">
+          <li><a href="academics.html#jss">Junior Secondary</a></li>
+          <li><a href="academics.html#sss">Senior Secondary</a></li>
+          <li><a href="gallery.html">Boarding Hostels</a></li>
+          <li><a href="gallery.html">Chapel & Daily Mass</a></li>
+          <li><a href="admissions.html#fees">Scholarships Fund</a></li>
+          <li><a href="contact.html#visit">Schedule a Visit</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4 class="footer-col-title">Newsletter</h4>
+        <p>Subscribe to the monthly Goretti Gazette for academic updates and school notices.</p>
+        <form onsubmit="return handleNewsletter(event)" class="newsletter-box">
+          <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+          <button type="submit" class="btn btn-gold" style="height:44px; padding:0 18px; font-size:13px;">Join</button>
+        </form>
       </div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 St Maria Goretti Girls Grammar School</span><span>Privacy • Terms</span></div>
+
+    <div class="container footer-bottom">
+      <div>
+        © 2026 St. Maria Goretti Girls' Grammar School. All Rights Reserved.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="about.html">Safeguarding Policy</a>
+        <a href="about.html">Privacy & Terms</a>
+        <a href="admissions.html">Prospectus</a>
+      </div>
+    </div>
   </footer>
 
   <script src="index.js"></script>

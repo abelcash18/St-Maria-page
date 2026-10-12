@@ -3,113 +3,345 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | St Maria Goretti</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>About Our Heritage & Leadership | St Maria Goretti Girls' Grammar School</title>
+  <meta name="description" content="Discover the venerable 60-year history, Catholic founding principles, leadership team, and educational philosophy of St Maria Goretti Girls' Grammar School.">
+  <link rel="icon" type="image/svg+xml" href="images/crest.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <header id="header" class="header">
-    <div class="header-inner">
-      <div class="logo-wrap">
-        <div class="logo">MG</div>
-        <div class="logo-text">
-          <div class="serif logo-title">St Maria Goretti</div>
-          <div class="logo-sub">Girls Grammar School</div>
-        </div>
+
+  <!-- Top Utility Bar -->
+  <aside class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-info">
+        <span>📍 Km 8 Benin-Auchi Road, Benin City, Edo State</span>
+        <span>📞 <a href="tel:+2348031234567">+234 803 123 4567</a></span>
+        <span>✉️ <a href="mailto:admissions@stmariagoretti.edu.ng">admissions@stmariagoretti.edu.ng</a></span>
       </div>
-      <nav class="desktop-nav">
-        <span class="nav-link" onclick="window.location.href='index.html'">Home</span>
-        <span class="nav-link" onclick="window.location.href='about.html'">About</span>
-        <span class="nav-link" onclick="window.location.href='academics.html'">Academics</span>
-        <span class="nav-link" onclick="window.location.href='admissions.html'">Admissions</span>
-        <span class="nav-link" onclick="window.location.href='gallery.html'">Campus</span>
-        <span class="nav-link" onclick="window.location.href='contact.html'">Contact</span>
+      <div class="top-bar-links">
+        <a href="admissions.html">Entrance Exam: March 14, 2026</a>
+        <a href="contact.html">Campus Tour</a>
+        <span class="portal-tag">Parent Portal</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrap" aria-label="St Maria Goretti Home">
+        <img src="images/crest.svg" alt="St Maria Goretti School Crest" class="logo-crest">
+        <div class="logo-text">
+          <span class="logo-title">St. Maria Goretti</span>
+          <span class="logo-sub">Girls' Grammar School • Est. 1962</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="gallery.html" class="nav-link">Campus Life</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
+
       <div class="header-actions">
-        <button class="btn btn-primary" onclick="window.location.href='admissions.html'">Apply Now</button>
+        <a href="admissions.html" class="btn btn-gold" id="applyBtn">Apply for 2026/27</a>
+        <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Toggle mobile menu">☰</button>
       </div>
     </div>
   </header>
 
-  <main class="page-shell">
-    <section class="page-hero">
-      <div class="container page-hero-inner">
-        <div>
-          <div class="page-tag"><span class="dot"></span> Our Story</div>
-          <h1 class="serif hero-title">A legacy of faith, scholarship and leadership</h1>
-          <p class="hero-desc">For generations, St Maria Goretti has prepared young women to lead with dignity, discipline and purpose.</p>
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer">
+      <div class="mobile-top">
+        <div class="logo-wrap">
+          <img src="images/crest.svg" alt="Crest" style="width:36px; height:42px;">
+          <div class="logo-text">
+            <span class="logo-title" style="font-size:15px;">St. Maria Goretti</span>
+            <span class="logo-sub" style="font-size:9.5px;">Grammar School</span>
+          </div>
         </div>
-        <div class="page-side-card card">
-          <h3 class="serif">Our mission</h3>
-          <ul>
-            <li>To form young women of character</li>
-            <li>To nurture wisdom and excellence</li>
-            <li>To build servant leaders for society</li>
-          </ul>
+        <button class="close-btn" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mobile-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="gallery.html" class="nav-link">Campus Life</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="admissions.html" class="btn btn-gold full" style="margin-top:16px;">Apply Now</a>
+      </div>
+      <div class="mobile-footer-info">
+        <p><strong>Enquiries:</strong> +234 803 123 4567</p>
+        <p>admissions@stmariagoretti.edu.ng</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Subpage Hero -->
+    <section class="subpage-hero">
+      <div class="container subpage-hero-inner">
+        <div>
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a> <span>/</span> <span>About Us</span>
+          </div>
+          <h1 class="serif subpage-title">A Venerable Legacy of Faith, Intellect & Character</h1>
+          <p class="subpage-desc">
+            Since 1962, St Maria Goretti Girls' Grammar School has stood as an enduring pillar of feminine academic distinction and Catholic character formation in Nigeria.
+          </p>
+        </div>
+        <div class="card" style="padding:28px; background:rgba(255,255,255,0.06); border-color:rgba(197,160,89,0.3); color:#fff; backdrop-filter:blur(10px);">
+          <div class="badge badge-light" style="margin-bottom:12px;">Motto of Goretti</div>
+          <h3 class="serif" style="color:var(--gold-light); font-size:22px; margin-bottom:8px;">Veritas, Gratia, Excellentia</h3>
+          <p style="font-size:14px; color:rgba(255,255,255,0.85); line-height:1.7;">
+            Truth in conduct, Grace in spirit, and Uncompromising Excellence in all human endeavours.
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- Foundational Story -->
     <section class="section-white">
       <div class="container">
-        <div class="page-grid">
-          <div class="story-card" data-reveal>
-            <div class="badge">Our Foundation</div>
-            <h3 class="serif">Rooted in Catholic values, driven by excellence</h3>
-            <p>Founded in 1962, St Maria Goretti Girls Grammar School stands as a beacon of academic excellence and moral formation. We believe every girl deserves a space where her intellect, identity and faith can flourish.</p>
+        <div class="grid-2" style="align-items:center;">
+          <div data-reveal>
+            <div class="badge badge-navy">Our Origins</div>
+            <h2 class="serif section-title" style="margin-bottom:18px;">Founded on Vision, Nurtured by Sacrifice</h2>
+            <p style="color:var(--text-secondary); font-size:15.5px; line-height:1.8; margin-bottom:16px;">
+              Established in 1962 by the Sisters of Charity under the auspices of the Catholic Diocese, St. Maria Goretti Girls' Grammar School was founded on a singular conviction: that educating young women transforms nations.
+            </p>
+            <p style="color:var(--text-secondary); font-size:15.5px; line-height:1.8; margin-bottom:16px;">
+              Named after Saint Maria Goretti — an embodiment of courage, purity of heart, and spiritual strength — the school has evolved over six decades from an initial intake of 45 pioneer students into one of West Africa's most revered girls' boarding institutions.
+            </p>
+            <p style="color:var(--text-secondary); font-size:15.5px; line-height:1.8;">
+              Here, girls are taught to think deeply, speak persuasively, pray sincerely, and lead with empathy.
+            </p>
           </div>
-          <div class="highlight-box" data-reveal>
-            <div class="badge" style="background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.2); color:#fff;">Since 1962</div>
-            <h3 class="serif" style="margin-top:12px; font-size:28px;">Empowering girls to lead with confidence and compassion.</h3>
-            <p>Our students engage in leadership, service, and scholarship across all levels, preparing them for success in school, life and community.</p>
+          <div data-reveal>
+            <div class="hero-media-card" style="box-shadow:var(--shadow-lg);">
+              <img src="images/library.jpg" alt="St Benedict Library interior" class="hero-img" style="height:380px;">
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Vision, Mission & Core Values -->
     <section class="section-cream">
       <div class="container">
-        <div class="value-grid">
-          <div class="value-card-page" data-reveal>
-            <div class="icon-badge">✝️</div>
-            <h3>Faith</h3>
-            <p>We cultivate a culture of prayer, virtue, service and moral courage, shaping girls who live purposefully and responsibly.</p>
+        <div class="grid-2" style="margin-bottom:48px;">
+          <div class="card" style="padding:40px; border-left:4px solid var(--gold);" data-reveal>
+            <div class="badge" style="margin-bottom:12px;">Our Vision</div>
+            <h3 class="serif" style="font-size:24px; margin-bottom:12px;">To Form Women Who Transform the World</h3>
+            <p style="color:var(--text-secondary); font-size:15px; line-height:1.75;">
+              To be a globally recognized center of academic excellence and holistic Catholic formation, nurturing young women who possess exceptional intellect, profound faith, and unwavering moral courage.
+            </p>
           </div>
-          <div class="value-card-page" data-reveal>
-            <div class="icon-badge">📚</div>
-            <h3>Excellence</h3>
-            <p>Academic excellence is central to our mission, with strong teaching, mentorship, and high expectations across every subject.</p>
+
+          <div class="card" style="padding:40px; border-left:4px solid var(--navy);" data-reveal>
+            <div class="badge badge-navy" style="margin-bottom:12px;">Our Mission</div>
+            <h3 class="serif" style="font-size:24px; margin-bottom:12px;">Intellect, Virtue and Sisterhood</h3>
+            <p style="color:var(--text-secondary); font-size:15px; line-height:1.75;">
+              To provide a safe, disciplined, and technologically enriched learning sanctuary where each girl discovers her unique God-given talents, develops a lifelong love of scholarship, and commits to selfless service.
+            </p>
           </div>
-          <div class="value-card-page" data-reveal>
-            <div class="icon-badge">🤝</div>
-            <h3>Sisterhood</h3>
-            <p>We build supportive relationships where every girl is encouraged, challenged and celebrated as she grows.</p>
+        </div>
+
+        <div class="section-head-center" data-reveal>
+          <div class="badge">The Four Cardinal Virtues</div>
+          <h2 class="serif section-title">Core Pillars Guiding Every Goretti Girl</h2>
+        </div>
+
+        <div class="grid-4">
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">✝️</div>
+            <h3 class="serif">Deep Faith</h3>
+            <p>Living consciously in the presence of God through daily sacramental life, reflection, and living Gospel values.</p>
           </div>
-          <div class="value-card-page" data-reveal>
-            <div class="icon-badge">👑</div>
-            <h3>Leadership</h3>
-            <p>From debate to school governance, our girls are prepared to speak, serve and influence positively in every sphere.</p>
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">📖</div>
+            <h3 class="serif">Scholarly Passion</h3>
+            <p>Pursuing academic distinction not merely for grades, but to cultivate a critical, inventive, and analytical mind.</p>
+          </div>
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">🛡️</div>
+            <h3 class="serif">Moral Integrity</h3>
+            <p>Upholding honesty, respect, and steadfast courage in speech and conduct under all circumstances.</p>
+          </div>
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">🤝</div>
+            <h3 class="serif">Lifelong Sisterhood</h3>
+            <p>Nurturing bonds of unconditional mutual support, dignity, and collective upliftment across generations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership & Governance -->
+    <section class="section-white">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="badge badge-navy">School Leadership</div>
+            <h2 class="serif section-title">Dedicated Guardians of Excellence</h2>
+            <p class="section-subtitle">Led by consecrated religious educators and experienced academic administrators.</p>
+          </div>
+        </div>
+
+        <div class="principal-section-card" data-reveal style="margin-bottom:48px;">
+          <div class="principal-photo-col">
+            <img src="images/principal.jpg" alt="Rev. Sr. Dr. Agnes Okonkwo" class="principal-portrait-img">
+            <div class="principal-badge-overlay">
+              <div class="principal-badge-name">Rev. Sr. Dr. Agnes Okonkwo</div>
+              <div class="principal-badge-title">School Principal • 18 Years in Educational Leadership</div>
+            </div>
+          </div>
+          <div class="principal-text-col">
+            <div class="badge badge-navy">From the Principal's Desk</div>
+            <h3 class="serif" style="font-size:26px; margin:16px 0 12px;">“Nurturing Tomorrow's Leaders in Grace and Wisdom”</h3>
+            <p class="principal-bio">
+              “When parents entrust their daughters to St Maria Goretti, they are placing their future in our hands. We honor this sacred trust by surrounding every student with high academic expectations, warm pastoral care, and daily spiritual nourishment.”
+            </p>
+            <p class="principal-bio">
+              Sr. Agnes holds a Doctorate in Educational Management and Leadership from the University of Ibadan, with over two decades of experience mentoring adolescent girls and guiding school curricula.
+            </p>
+            <div class="principal-sign">
+              <div>
+                <div class="sign-title">Rev. Sr. Dr. Agnes Okonkwo, Ph.D.</div>
+                <div class="sign-sub">Principal • Sisters of Charity</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card" style="padding:28px;" data-reveal>
+            <div class="badge" style="margin-bottom:12px;">Vice Principal (Academics)</div>
+            <h3 class="serif" style="font-size:20px; margin-bottom:8px;">Mr. Francis O. Aliu</h3>
+            <p style="font-size:13px; color:var(--gold-dark); font-weight:700; margin-bottom:10px;">M.Ed. Curriculum Studies • 15 Years Service</p>
+            <p style="font-size:14px; color:var(--text-secondary); line-height:1.6;">
+              Oversees senior school academic performance, faculty professional development, WASSCE distinction strategies, and university admissions counselling.
+            </p>
+          </div>
+
+          <div class="card" style="padding:28px;" data-reveal>
+            <div class="badge badge-navy" style="margin-bottom:12px;">Vice Principal (Pastoral & Boarding)</div>
+            <h3 class="serif" style="font-size:20px; margin-bottom:8px;">Rev. Sr. Bernadette Obi</h3>
+            <p style="font-size:13px; color:var(--gold-dark); font-weight:700; margin-bottom:10px;">B.A. Guidance & Counselling • Sisters of Charity</p>
+            <p style="font-size:14px; color:var(--text-secondary); line-height:1.6;">
+              Directs student boarding welfare, dining nutrition, medical infirmary, housemistresses, and adolescent character mentorship across all hostels.
+            </p>
+          </div>
+
+          <div class="card" style="padding:28px;" data-reveal>
+            <div class="badge" style="margin-bottom:12px;">School Chaplain</div>
+            <h3 class="serif" style="font-size:20px; margin-bottom:8px;">Rev. Fr. Emmanuel Osagie</h3>
+            <p style="font-size:13px; color:var(--gold-dark); font-weight:700; margin-bottom:10px;">Licentiate in Sacred Theology (STL)</p>
+            <p style="font-size:14px; color:var(--text-secondary); line-height:1.6;">
+              Administers the sacraments, leads daily celebration of Mass in the St Maria Chapel, conducts spiritual retreats, and provides pastoral accompaniment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boarding Life & Safeguarding Policy -->
+    <section class="section-cream">
+      <div class="container">
+        <div class="grid-2" style="align-items:center;">
+          <div data-reveal>
+            <div class="hero-media-card" style="box-shadow:var(--shadow-lg);">
+              <img src="images/chapel.jpg" alt="Chapel of St Maria Goretti" class="hero-img" style="height:380px;">
+            </div>
+          </div>
+          <div data-reveal>
+            <div class="badge">Safe & Nurturing Sanctuary</div>
+            <h2 class="serif section-title" style="margin-bottom:18px;">Safeguarding & Student Well-Being</h2>
+            <p style="color:var(--text-secondary); font-size:15px; line-height:1.8; margin-bottom:14px;">
+              At St Maria Goretti, child protection and safeguarding are non-negotiable priorities. Our campus operates under strict pastoral guidelines ensuring zero tolerance for bullying, harassment, or negligence.
+            </p>
+            <ul class="curriculum-list" style="margin-bottom:24px;">
+              <li>24/7 Security personnel and perimeter surveillance</li>
+              <li>Fully-staffed modern medical clinic with resident registered nurses</li>
+              <li>Dedicated School Guidance & Adolescent Counselling department</li>
+              <li>Resident Housemistresses providing maternal mentorship around the clock</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Schedule a Campus Inspection</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Authoritative Footer -->
   <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="logo-wrap"><div class="logo white">MG</div><div><div class="serif footer-logo-title">St Maria Goretti</div><div class="footer-logo-sub">GIRLS GRAMMAR SCHOOL</div></div></div>
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/crest.svg" alt="School Crest" class="footer-crest">
+          <div>
+            <div class="footer-brand-title">St. Maria Goretti</div>
+            <div class="footer-brand-sub">Girls' Grammar School</div>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Forming virtuous, academically distinguished, and confident young women in the Catholic tradition since 1962.
+        </p>
+        <span class="motto-banner">Veritas • Gratia • Excellentia</span>
       </div>
+
       <div>
-        <div class="footer-head">ADDRESS</div>
-        <div class="footer-links">Km 8 Benin-Auchi Road<br>Edo State, Nigeria</div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="about.html">About & Heritage</a></li>
+          <li><a href="academics.html">Academic Curriculum</a></li>
+          <li><a href="admissions.html">Admissions 2026/27</a></li>
+          <li><a href="gallery.html">Campus Life & Labs</a></li>
+          <li><a href="contact.html">Contact & Directions</a></li>
+        </ul>
       </div>
+
       <div>
-        <div class="footer-head">CONNECT</div>
-        <div class="footer-links">registrar@stmariagoretti.edu.ng<br>+234 803 123 4567</div>
+        <h4 class="footer-col-title">School Life</h4>
+        <ul class="footer-links-list">
+          <li><a href="academics.html#jss">Junior Secondary</a></li>
+          <li><a href="academics.html#sss">Senior Secondary</a></li>
+          <li><a href="gallery.html">Boarding Hostels</a></li>
+          <li><a href="gallery.html">Chapel & Daily Mass</a></li>
+          <li><a href="admissions.html#fees">Scholarships Fund</a></li>
+          <li><a href="contact.html#visit">Schedule a Visit</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4 class="footer-col-title">Newsletter</h4>
+        <p>Subscribe to the monthly Goretti Gazette for academic updates and school notices.</p>
+        <form onsubmit="return handleNewsletter(event)" class="newsletter-box">
+          <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+          <button type="submit" class="btn btn-gold" style="height:44px; padding:0 18px; font-size:13px;">Join</button>
+        </form>
       </div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 St Maria Goretti Girls Grammar School</span><span>Privacy • Terms</span></div>
+
+    <div class="container footer-bottom">
+      <div>
+        © 2026 St. Maria Goretti Girls' Grammar School. All Rights Reserved.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="about.html">Safeguarding Policy</a>
+        <a href="about.html">Privacy & Terms</a>
+        <a href="admissions.html">Prospectus</a>
+      </div>
+    </div>
   </footer>
 
   <script src="index.js"></script>

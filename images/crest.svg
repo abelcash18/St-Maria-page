@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D086"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#936D25"/>
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#122A54"/>
+      <stop offset="100%" stop-color="#081427"/>
+    </linearGradient>
+    <linearGradient id="shieldBorder" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EED59B"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#805C1B"/>
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Laurel Wreath Background Accents -->
+  <g fill="url(#goldGrad)" opacity="0.85">
+    <path d="M42,120 C32,100 30,76 38,55 C40,65 46,75 50,82 C44,92 41,106 42,120 Z"/>
+    <path d="M30,145 C22,128 22,108 28,90 C32,98 38,106 43,112 C37,122 33,133 30,145 Z"/>
+    <path d="M25,172 C20,154 22,136 28,120 C32,128 38,134 42,139 C36,150 31,161 25,172 Z"/>
+    
+    <path d="M158,120 C168,100 170,76 162,55 C160,65 154,75 150,82 C156,92 159,106 158,120 Z"/>
+    <path d="M170,145 C178,128 178,108 172,90 C168,98 162,106 157,112 C163,122 167,133 170,145 Z"/>
+    <path d="M175,172 C180,154 178,136 172,120 C168,128 162,134 158,139 C164,150 169,161 175,172 Z"/>
+  </g>
+
+  <!-- Shield Base -->
+  <path d="M100,15 C135,15 168,22 168,48 C168,122 144,178 100,205 C56,178 32,122 32,48 C32,22 65,15 100,15 Z" 
+        fill="url(#navyGrad)" stroke="url(#shieldBorder)" stroke-width="4.5" filter="url(#subtleShadow)"/>
+
+  <!-- Inner Gold Inset Border -->
+  <path d="M100,24 C130,24 159,30 159,52 C159,118 138,168 100,192 C62,168 41,118 41,52 C41,30 70,24 100,24 Z" 
+        fill="none" stroke="url(#goldGrad)" stroke-width="1.8" stroke-dasharray="4,2"/>
+
+  <!-- Heraldic Cross Quarter Split Lines -->
+  <line x1="100" y1="28" x2="100" y2="186" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <line x1="44" y1="92" x2="156" y2="92" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+
+  <!-- Top Center: Latin Cross -->
+  <g fill="url(#goldGrad)" stroke="#6A490F" stroke-width="0.4">
+    <rect x="96.5" y="38" width="7" height="34" rx="1.5"/>
+    <rect x="88.5" y="46" width="23" height="7" rx="1.5"/>
+  </g>
+
+  <!-- Left: Open Book of Knowledge / Veritas -->
+  <g fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M58,62 C65,58 74,60 78,63 C82,60 91,58 98,62 L98,78 C91,74 82,76 78,79 C74,76 65,74 58,78 Z" fill="#0C1D3A"/>
+    <path d="M78,63 L78,79"/>
+  </g>
+  <!-- Book bookmark / pages -->
+  <line x1="63" y1="68" x2="73" y2="67" stroke="url(#goldGrad)" stroke-width="1.2"/>
+  <line x1="63" y1="72" x2="73" y2="71" stroke="url(#goldGrad)" stroke-width="1.2"/>
+  <line x1="83" y1="67" x2="93" y2="68" stroke="url(#goldGrad)" stroke-width="1.2"/>
+  <line x1="83" y1="71" x2="93" y2="72" stroke="url(#goldGrad)" stroke-width="1.2"/>
+
+  <!-- Right: Lamp of Learning / Torch of Wisdom -->
+  <g fill="url(#goldGrad)">
+    <!-- Flame -->
+    <path d="M125,48 C127,42 121,38 123,32 C126,38 132,41 129,48 C128,50 126,50 125,48 Z" fill="#F2D086"/>
+    <!-- Lamp body -->
+    <path d="M115,58 C115,53 135,53 135,58 C135,63 129,66 125,66 C121,66 115,63 115,58 Z"/>
+    <path d="M122,66 L128,66 L130,73 L120,73 Z"/>
+    <rect x="117" y="73" width="16" height="3" rx="1"/>
+  </g>
+
+  <!-- Bottom Crest Motif: Monogram SMG -->
+  <text x="100" y="146" text-anchor="middle" font-family="'Cinzel', 'Playfair Display', serif" font-size="28" font-weight="700" fill="url(#goldGrad)" letter-spacing="2">SMG</text>
+  
+  <!-- Motto Stars -->
+  <polygon points="76,160 78,164 82,165 79,168 80,172 76,170 72,172 73,168 70,165 74,164" fill="url(#goldGrad)"/>
+  <polygon points="100,166 102,170 106,171 103,174 104,178 100,176 96,178 97,174 94,171 98,170" fill="url(#goldGrad)"/>
+  <polygon points="124,160 126,164 130,165 127,168 128,172 124,170 120,172 121,168 118,165 122,164" fill="url(#goldGrad)"/>
+
+  <!-- Ribbon at Bottom for Est. 1962 -->
+  <g filter="url(#subtleShadow)">
+    <path d="M40,208 L62,198 L62,216 Z" fill="#755216"/>
+    <path d="M160,208 L138,198 L138,216 Z" fill="#755216"/>
+    <rect x="52" y="200" width="96" height="22" rx="4" fill="url(#goldGrad)" stroke="#7D581A" stroke-width="1"/>
+    <text x="100" y="215" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10.5" font-weight="800" fill="#0A192F" letter-spacing="2">EST. 1962</text>
+  </g>
+</svg>

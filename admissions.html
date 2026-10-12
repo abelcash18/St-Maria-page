@@ -1,147 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admissions | St Maria Goretti</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions & Enrollment 2026/2027 | St Maria Goretti Girls' Grammar School</title>
+  <meta name="description" content="Apply for the 2026/2027 academic session at St Maria Goretti Girls' Grammar School. Entrance exam details, checklist, fees, scholarships, and online application portal.">
+  <link rel="icon" type="image/svg+xml" href="images/crest.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <header id="header" class="header">
-    <div class="header-inner">
-      <div class="logo-wrap">
-        <div class="logo">MG</div>
-        <div class="logo-text">
-          <div class="serif logo-title">St Maria Goretti</div>
-          <div class="logo-sub">Girls Grammar School</div>
-        </div>
+
+  <!-- Top Utility Bar -->
+  <aside class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-info">
+        <span>📍 Km 8 Benin-Auchi Road, Benin City, Edo State</span>
+        <span>📞 <a href="tel:+2348031234567">+234 803 123 4567</a></span>
+        <span>✉️ <a href="mailto:admissions@stmariagoretti.edu.ng">admissions@stmariagoretti.edu.ng</a></span>
       </div>
-      <nav class="desktop-nav">
-        <span class="nav-link" onclick="window.location.href='index.html#home'">Home</span>
-        <span class="nav-link" onclick="window.location.href='index.html#about'">About</span>
-        <span class="nav-link" onclick="window.location.href='index.html#academics'">Academics</span>
-        <span class="nav-link" onclick="window.location.href='admissions.html'">Admissions</span>
-        <span class="nav-link" onclick="window.location.href='index.html#campus'">Campus</span>
-        <span class="nav-link" onclick="window.location.href='index.html#contact'">Contact</span>
+      <div class="top-bar-links">
+        <a href="admissions.html">Entrance Exam: March 14, 2026</a>
+        <a href="contact.html">Campus Tour</a>
+        <span class="portal-tag">Parent Portal</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrap" aria-label="St Maria Goretti Home">
+        <img src="images/crest.svg" alt="St Maria Goretti School Crest" class="logo-crest">
+        <div class="logo-text">
+          <span class="logo-title">St. Maria Goretti</span>
+          <span class="logo-sub">Girls' Grammar School • Est. 1962</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="admissions.html" class="nav-link active">Admissions</a>
+        <a href="gallery.html" class="nav-link">Campus Life</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
+
       <div class="header-actions">
-        <button class="btn btn-primary" onclick="window.location.href='index.html#contact'">Talk to Registrar</button>
+        <a href="#applyForm" class="btn btn-gold" id="applyBtn">Apply Online</a>
+        <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Toggle mobile menu">☰</button>
       </div>
     </div>
   </header>
 
-  <main class="page-shell">
-    <section class="admissions-hero">
-      <div class="container admissions-hero-inner">
-        <div data-reveal>
-          <div class="badge"><span class="dot"></span> Admissions Open</div>
-          <h1 class="serif hero-title">Apply for the 2026/2027 academic session</h1>
-          <p class="hero-desc">A faith-filled, academically rigorous environment where every girl is prepared to lead, serve and excel.</p>
-          <div class="hero-btns">
-            <button class="btn btn-primary" onclick="document.getElementById('admissionForm').scrollIntoView({behavior:'smooth'})">Start Application</button>
-            <button class="btn btn-outline" onclick="window.location.href='index.html'">Back to Home</button>
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer">
+      <div class="mobile-top">
+        <div class="logo-wrap">
+          <img src="images/crest.svg" alt="Crest" style="width:36px; height:42px;">
+          <div class="logo-text">
+            <span class="logo-title" style="font-size:15px;">St. Maria Goretti</span>
+            <span class="logo-sub" style="font-size:9.5px;">Grammar School</span>
           </div>
         </div>
-        <div class="admissions-side card" data-reveal>
-          <h3 class="serif">What you get</h3>
-          <ul class="feature-list">
-            <li>✔ Faith-based leadership</li>
-            <li>✔ Small class sizes</li>
-            <li>✔ Boarding and day options</li>
-            <li>✔ Excellent university pathway</li>
-            <li>✔ Supportive school community</li>
-          </ul>
+        <button class="close-btn" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mobile-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="admissions.html" class="nav-link active">Admissions</a>
+        <a href="gallery.html" class="nav-link">Campus Life</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#applyForm" class="btn btn-gold full" style="margin-top:16px;">Apply Now</a>
+      </div>
+      <div class="mobile-footer-info">
+        <p><strong>Admissions Registry:</strong></p>
+        <p>📞 +234 803 123 4567</p>
+        <p>admissions@stmariagoretti.edu.ng</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Subpage Hero -->
+    <section class="subpage-hero">
+      <div class="container subpage-hero-inner">
+        <div>
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a> <span>/</span> <span>Admissions</span>
+          </div>
+          <h1 class="serif subpage-title">Admissions Open for the 2026/2027 Academic Session</h1>
+          <p class="subpage-desc">
+            We welcome young women who demonstrate a passion for learning, integrity of character, and a desire to excel in a supportive Catholic community.
+          </p>
+          <div class="hero-btns" style="margin-top:24px;">
+            <a href="#applyForm" class="btn btn-gold">Complete Online Application</a>
+            <a href="#dates" class="btn btn-outline-gold">Important Dates & Checklist</a>
+          </div>
+        </div>
+        <div class="card" style="padding:28px; background:rgba(255,255,255,0.06); border-color:rgba(197,160,89,0.3); color:#fff; backdrop-filter:blur(10px);">
+          <div class="badge badge-light" style="margin-bottom:12px;">Entrance Examination</div>
+          <h3 class="serif" style="color:var(--gold-light); font-size:22px; margin-bottom:8px;">Saturday, 14th March 2026</h3>
+          <p style="font-size:14px; color:rgba(255,255,255,0.85); line-height:1.7;">
+            Conducted at our main campus in Benin City, with designated satellite testing centers in Lagos, Abuja, and Port Harcourt.
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- The 4-Stage Admissions Process -->
     <section class="section-white">
-      <div class="container admissions-grid">
-        <div class="card info-card" data-reveal>
-          <div class="badge">Requirements</div>
-          <h3 class="serif">Application checklist</h3>
-          <ul class="check-list">
-            <li>Birth certificate</li>
-            <li>Recent passport photograph</li>
-            <li>Academic transcript or results</li>
-            <li>Parent/guardian ID</li>
-            <li>Recommendation letter</li>
-          </ul>
+      <div class="container">
+        <div class="section-head-center" data-reveal>
+          <div class="badge badge-navy">Step-by-Step Guide</div>
+          <h2 class="serif section-title">The Admissions Journey</h2>
+          <p class="section-subtitle">A transparent, merit-based selection process structured to identify intellectual curiosity and virtuous character.</p>
         </div>
 
-        <div class="card info-card" data-reveal>
-          <div class="badge">Important Dates</div>
-          <h3 class="serif">Upcoming dates</h3>
-          <ul class="check-list compact">
-            <li><strong>Application Opens:</strong> 1st February 2026</li>
-            <li><strong>Entrance Test:</strong> 14th March 2026</li>
-            <li><strong>Interviews:</strong> 20th - 30th March 2026</li>
-            <li><strong>School Resumption:</strong> September 2026</li>
-          </ul>
+        <div class="grid-4">
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">1</div>
+            <h3 class="serif">Application</h3>
+            <p>Submit the online registration form below or obtain the hardcopy admission packet from the Registry. Upload passport photo and academic records.</p>
+          </div>
+
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">2</div>
+            <h3 class="serif">Entrance Exam</h3>
+            <p>Candidates sit for assessments in English Language, Mathematics, and General Aptitude on Saturday, 14th March 2026.</p>
+          </div>
+
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">3</div>
+            <h3 class="serif">Interview</h3>
+            <p>Shortlisted candidates and their parents attend an interview with the Principal, Reverend Sisters, and senior academic faculty.</p>
+          </div>
+
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-icon-box">4</div>
+            <h3 class="serif">Enrollment</h3>
+            <p>Successful candidates receive formal letters of admission, house allocation, boarding supply list, and orientation dates.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section-cream" id="admissionForm">
-      <div class="container form-wrap">
-        <div class="card contact-form-card" data-reveal>
-          <h3 class="serif">Apply now</h3>
-          <p class="form-sub">Complete the form below and our admissions team will contact you.</p>
-          <form id="contactForm" onsubmit="handleContact(event)">
-            <div class="form-row">
-              <input name="name" required placeholder="Parent / Guardian Name" />
-              <input name="email" type="email" required placeholder="Email Address" />
+    <!-- Checklist & Important Dates -->
+    <section class="section-cream" id="dates">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card" style="padding:36px;" data-reveal>
+            <div class="badge badge-navy" style="margin-bottom:14px;">Required Documents</div>
+            <h3 class="serif" style="font-size:24px; margin-bottom:16px;">Application Checklist</h3>
+            <ul class="curriculum-list">
+              <li>Completed Application Form (Online or Hardcopy)</li>
+              <li>Official Birth Certificate or statutory declaration of age</li>
+              <li>Two recent passport-sized color photographs (red background)</li>
+              <li>Last 2 years of continuous academic assessment reports / Primary 5 & 6 results</li>
+              <li>Letter of moral recommendation from candidate's parish priest or school principal</li>
+              <li>Medical fitness certificate (prior to boarding resumption)</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:36px;" data-reveal>
+            <div class="badge" style="margin-bottom:14px;">Key Schedule</div>
+            <h3 class="serif" style="font-size:24px; margin-bottom:16px;">Key Admissions Dates 2026/27</h3>
+            <ul class="curriculum-list">
+              <li><strong>Applications Open:</strong> 1st December 2025</li>
+              <li><strong>Application Deadline:</strong> 28th February 2026</li>
+              <li><strong>National Entrance Exam:</strong> Saturday, 14th March 2026 (9:00 AM)</li>
+              <li><strong>Release of Exam Results:</strong> 25th March 2026</li>
+              <li><strong>Family Interviews:</strong> 1st – 10th April 2026</li>
+              <li><strong>Orientation & Boarding Resumption:</strong> September 2026</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Official Online Application Form -->
+    <section class="section-white" id="applyForm">
+      <div class="container" style="max-width:960px;">
+        <div class="form-card" data-reveal style="box-shadow:var(--shadow-xl); border:1px solid var(--border-gold);">
+          <div class="section-head-center" style="margin-bottom:32px;">
+            <div class="badge">Official Portal</div>
+            <h2 class="serif section-title" style="font-size:32px;">2026/2027 Student Admission Form</h2>
+            <p class="section-subtitle">Please complete all fields carefully. Our Admissions Registry will process your application within 24–48 hours.</p>
+          </div>
+
+          <form id="officialAdmissionForm" onsubmit="return handleFormSubmit(event, 'Student Admission Application')">
+            <h4 class="serif" style="color:var(--navy); font-size:18px; margin-bottom:14px; border-bottom:1px solid var(--border-light); padding-bottom:8px;">1. Candidate (Student) Information</h4>
+
+            <div class="form-group-row">
+              <div class="form-field">
+                <label class="form-label" for="studentFullName">Candidate Full Name (Surname First) *</label>
+                <input type="text" id="studentFullName" name="name" required placeholder="e.g. ADELEKE, Joy Chimamanda">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" required>
+              </div>
             </div>
-            <div class="form-row">
-              <input name="child" placeholder="Student Name" />
-              <input name="phone" placeholder="Phone Number" />
+
+            <div class="form-group-row">
+              <div class="form-field">
+                <label class="form-label" for="targetClass">Class Applied For *</label>
+                <select id="targetClass" name="targetClass" required>
+                  <option value="JSS 1 (Primary 6 Graduate)">Junior Secondary 1 (JSS 1 - Primary 6 Graduate)</option>
+                  <option value="JSS 2 (Transfer Candidate)">Junior Secondary 2 (JSS 2 - Transfer Candidate)</option>
+                  <option value="SS 1 (BECE Graduate - Pure Sciences)">Senior Secondary 1 (SS 1 - Pure Sciences)</option>
+                  <option value="SS 1 (BECE Graduate - Arts & Humanities)">Senior Secondary 1 (SS 1 - Arts & Humanities)</option>
+                  <option value="SS 1 (BECE Graduate - Commercial)">Senior Secondary 1 (SS 1 - Commercial)</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="enrollmentType">Enrollment Type *</label>
+                <select id="enrollmentType" name="enrollmentType" required>
+                  <option value="Full Boarding (Hostel Residency)">Full Boarding (Hostel Residency)</option>
+                  <option value="Day Student (Benin City Residents Only)">Day Student (Benin City Residents Only)</option>
+                </select>
+              </div>
             </div>
-            <div class="form-row">
-              <select name="level">
-                <option>JSS1</option>
-                <option>JSS2</option>
-                <option>JSS3</option>
-                <option>SS1</option>
-                <option>SS2</option>
-                <option>Transfer</option>
-              </select>
-              <select name="entry">
-                <option>2026/2027 Session</option>
-                <option>2027/2028 Session</option>
-                <option>Immediate Enquiry</option>
-              </select>
+
+            <div class="form-group-row">
+              <div class="form-field">
+                <label class="form-label" for="prevSchool">Current / Primary School Attended *</label>
+                <input type="text" id="prevSchool" name="prevSchool" required placeholder="e.g. St. Saviours Primary School, Lagos">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="examCenter">Preferred Entrance Examination Center *</label>
+                <select id="examCenter" name="examCenter" required>
+                  <option value="Main Campus (Benin City, Edo State)">Main Campus (Benin City, Edo State)</option>
+                  <option value="Lagos Center (Maryland)">Lagos Center (Maryland)</option>
+                  <option value="Abuja Center (Garki)">Abuja Center (Garki)</option>
+                  <option value="Port Harcourt Center">Port Harcourt Center</option>
+                </select>
+              </div>
             </div>
-            <textarea name="message" required placeholder="Tell us about your child and the class they are applying for..."></textarea>
-            <button class="btn btn-primary full">Submit Application</button>
-            <div id="contactStatus" class="form-status"></div>
+
+            <h4 class="serif" style="color:var(--navy); font-size:18px; margin:28px 0 14px; border-bottom:1px solid var(--border-light); padding-bottom:8px;">2. Parent / Guardian Information</h4>
+
+            <div class="form-group-row">
+              <div class="form-field">
+                <label class="form-label" for="guardianName">Parent / Guardian Full Name *</label>
+                <input type="text" id="guardianName" name="guardianName" required placeholder="e.g. Dr. & Mrs. E. O. Adeleke">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="guardianRelationship">Relationship to Candidate *</label>
+                <select id="guardianRelationship" name="relationship">
+                  <option value="Father">Father</option>
+                  <option value="Mother">Mother</option>
+                  <option value="Legal Guardian">Legal Guardian</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-field">
+                <label class="form-label" for="guardianEmail">Email Address for Admission Notices *</label>
+                <input type="email" id="guardianEmail" name="email" required placeholder="guardian.email@domain.com">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="guardianPhone">Phone / WhatsApp Number *</label>
+                <input type="tel" id="guardianPhone" name="phone" required placeholder="+234 803 000 0000">
+              </div>
+            </div>
+
+            <div class="form-field" style="margin-bottom:24px;">
+              <label class="form-label" for="homeAddress">Residential Address *</label>
+              <input type="text" id="homeAddress" name="address" required placeholder="House number, Street, City, State">
+            </div>
+
+            <div class="form-field" style="margin-bottom:24px;">
+              <label class="form-label" for="additionalNotes">Candidate Special Talents, Interests or Medical Notes</label>
+              <textarea id="additionalNotes" name="message" placeholder="Please mention musical instruments played, sports, debate experience, or any dietary/medical information..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold full" style="height:52px; font-size:16px;">Submit Application for 2026/2027 Session</button>
+            <div class="form-status" id="formStatus"></div>
           </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fees & Scholarships Information -->
+    <section class="section-cream" id="fees">
+      <div class="container">
+        <div class="grid-2" style="align-items:center;">
+          <div data-reveal>
+            <div class="badge">Financial Transparency</div>
+            <h2 class="serif section-title" style="margin-bottom:18px;">Tuition Structure & Sisterhood Scholarships</h2>
+            <p style="color:var(--text-secondary); font-size:15px; line-height:1.8; margin-bottom:16px;">
+              As a Catholic mission institution, St Maria Goretti maintains competitive, subsidised fee structures without compromising our commitment to world-class faculty, modern laboratories, and premium boarding nutrition.
+            </p>
+            <p style="color:var(--text-secondary); font-size:15px; line-height:1.8; margin-bottom:16px;">
+              <strong>Sisterhood Endowment Fund:</strong> Merit-based awards are granted to candidates scoring in the top 5th percentile of the Entrance Examination. Catholic diocesan need-based tuition waivers are also available for families demonstrating financial hardship.
+            </p>
+            <a href="contact.html" class="btn btn-outline">Request Detailed Fee Schedule</a>
+          </div>
+
+          <div class="hero-media-card" data-reveal style="box-shadow:var(--shadow-lg);">
+            <img src="images/hero_students.jpg" alt="St Maria Goretti Students" class="hero-img" style="height:360px;">
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Authoritative Footer -->
   <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="logo-wrap">
-          <div class="logo white">MG</div>
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/crest.svg" alt="School Crest" class="footer-crest">
           <div>
-            <div class="serif footer-logo-title">St Maria Goretti</div>
-            <div class="footer-logo-sub">GIRLS GRAMMAR SCHOOL</div>
+            <div class="footer-brand-title">St. Maria Goretti</div>
+            <div class="footer-brand-sub">Girls' Grammar School</div>
           </div>
         </div>
+        <p class="footer-desc">
+          Forming virtuous, academically distinguished, and confident young women in the Catholic tradition since 1962.
+        </p>
+        <span class="motto-banner">Veritas • Gratia • Excellentia</span>
       </div>
+
       <div>
-        <div class="footer-head">CONTACT</div>
-        <div class="footer-links">+234 803 123 4567<br>registrar@stmariagoretti.edu.ng</div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="about.html">About & Heritage</a></li>
+          <li><a href="academics.html">Academic Curriculum</a></li>
+          <li><a href="admissions.html">Admissions 2026/27</a></li>
+          <li><a href="gallery.html">Campus Life & Labs</a></li>
+          <li><a href="contact.html">Contact & Directions</a></li>
+        </ul>
       </div>
+
       <div>
-        <div class="footer-head">ADDRESS</div>
-        <div class="footer-links">Km 8 Benin-Auchi Road,<br>Edo State, Nigeria</div>
+        <h4 class="footer-col-title">School Life</h4>
+        <ul class="footer-links-list">
+          <li><a href="academics.html#jss">Junior Secondary</a></li>
+          <li><a href="academics.html#sss">Senior Secondary</a></li>
+          <li><a href="gallery.html">Boarding Hostels</a></li>
+          <li><a href="gallery.html">Chapel & Daily Mass</a></li>
+          <li><a href="admissions.html#fees">Scholarships Fund</a></li>
+          <li><a href="contact.html#visit">Schedule a Visit</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4 class="footer-col-title">Newsletter</h4>
+        <p>Subscribe to the monthly Goretti Gazette for academic updates and school notices.</p>
+        <form onsubmit="return handleNewsletter(event)" class="newsletter-box">
+          <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+          <button type="submit" class="btn btn-gold" style="height:44px; padding:0 18px; font-size:13px;">Join</button>
+        </form>
       </div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 St Maria Goretti Girls Grammar School</span><span>Privacy • Terms</span></div>
+
+    <div class="container footer-bottom">
+      <div>
+        © 2026 St. Maria Goretti Girls' Grammar School. All Rights Reserved.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="about.html">Safeguarding Policy</a>
+        <a href="about.html">Privacy & Terms</a>
+        <a href="admissions.html">Prospectus</a>
+      </div>
+    </div>
   </footer>
 
   <script src="index.js"></script>
